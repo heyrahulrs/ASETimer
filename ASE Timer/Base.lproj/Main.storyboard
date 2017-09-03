@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
-                                <rect key="frame" x="179.5" y="491" width="16.5" height="68.5"/>
+                                <rect key="frame" x="40" y="491" width="295" height="68.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,10 +70,15 @@
                             <constraint firstItem="t93-w6-4h1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohn-9L-hkd"/>
                             <constraint firstItem="2Tb-4Z-Ity" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P8b-db-89b"/>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="kr3-vh-TfF" secondAttribute="bottom" constant="50" id="VC7-tx-vAZ"/>
+                            <constraint firstItem="eFP-Dx-nye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ois-IR-uiM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFP-Dx-nye" secondAttribute="trailing" constant="40" id="rig-WF-WJc"/>
                             <constraint firstItem="2Tb-4Z-Ity" firstAttribute="top" secondItem="xZi-44-XqV" secondAttribute="bottom" constant="60" id="stQ-l0-23E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countdownTimerLabel" destination="eFP-Dx-nye" id="KrO-rB-205"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

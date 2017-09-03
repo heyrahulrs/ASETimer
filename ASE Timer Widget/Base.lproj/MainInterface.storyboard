@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="ASE_Timer_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Special Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mo-d0-lT4">
+                                <rect key="frame" x="100" y="15" width="215" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-vi-gKd">
+                                <rect key="frame" x="100" y="58" width="215" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_logo_widget" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
+                                <rect key="frame" x="15" y="15" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="z4l-I4-Cqq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="0AX-ap-G9D"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3ov-vi-gKd" secondAttribute="trailing" constant="5" id="43o-8t-DrM"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="top" secondItem="3Mo-d0-lT4" secondAttribute="bottom" constant="10" id="CDN-lw-O8O"/>
+                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="HwD-Za-S5O"/>
+                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="UgK-j6-PxW"/>
+                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="15" id="diP-7d-QRP"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="gcR-Ia-d0p"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3Mo-d0-lT4" secondAttribute="trailing" constant="5" id="oVX-bF-PfC"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="U3Y-50-w7Q" secondAttribute="bottom" constant="15" id="w0M-XT-i2K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="countdownTimerLabel" destination="3ov-vi-gKd" id="nLL-3s-aEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple_logo_widget" width="249" height="249"/>
+    </resources>
+</document>
