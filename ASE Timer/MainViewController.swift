@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
                 return
             }
             
-            let days = Int(round(timer / 86400))
+            let days = Int(timer / 86400)
             let hours = Int(timer.truncatingRemainder(dividingBy: 86400) / 3600)
             let minutes = Int(timer.truncatingRemainder(dividingBy: 3600) / 60)
             let seconds = Int(timer.truncatingRemainder(dividingBy: 60))
