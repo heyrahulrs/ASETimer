@@ -18,18 +18,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         let eventUnixTime: TimeInterval = 1505235600
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (t) in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { Void in
             
             let currentUnixTime = Date().timeIntervalSince1970
             
             let timer: Double = eventUnixTime - currentUnixTime
             
             if timer <= 0 {
-                self.countdownTimerLabel.text = "Watch the event live at apple.com/live"
+                self.countdownTimerLabel.text = "Watch the event live at apple.co/live"
                 return
             }
             
-            let days = Int(round(timer / 86400))
+            let days = Int(timer / 86400)
             let hours = Int(timer.truncatingRemainder(dividingBy: 86400) / 3600)
             let minutes = Int(timer.truncatingRemainder(dividingBy: 3600) / 60)
             let seconds = Int(timer.truncatingRemainder(dividingBy: 60))

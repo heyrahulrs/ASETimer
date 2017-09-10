@@ -17,14 +17,14 @@ class MainViewController: UIViewController {
 
         let eventUnixTime: TimeInterval = 1505235600
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (t) in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { Void in
             
             let currentUnixTime = Date().timeIntervalSince1970
             
             let timer: Double = eventUnixTime - currentUnixTime
             
             if timer <= 0 {
-                self.countdownTimerLabel.text = "Watch the event live at apple.com/live"
+                self.countdownTimerLabel.text = "Watch the event live at apple.co/live"
                 return
             }
             
