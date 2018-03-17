@@ -16,7 +16,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let eventUnixTime: TimeInterval = 1505235600
+        let eventUnixTime: TimeInterval = 1522162800
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { Void in
             
