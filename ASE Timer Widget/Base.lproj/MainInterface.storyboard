@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-            <string>AvenirNext-DemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
@@ -23,36 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple March Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mo-d0-lT4">
-                                <rect key="frame" x="100" y="15" width="215" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mo-d0-lT4">
+                                <rect key="frame" x="137" y="15" width="178" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-vi-gKd">
-                                <rect key="frame" x="100" y="58" width="215" height="34.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <rect key="frame" x="137" y="56.5" width="178" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero_2x" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
-                                <rect key="frame" x="15" y="15" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_small" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
+                                <rect key="frame" x="0.0" y="0.0" width="132" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="z4l-I4-Cqq"/>
+                                    <constraint firstAttribute="width" secondItem="U3Y-50-w7Q" secondAttribute="height" multiplier="18:15" id="asf-td-KDb"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Mo-d0-lT4" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="0AX-ap-G9D"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3ov-vi-gKd" secondAttribute="trailing" constant="5" id="43o-8t-DrM"/>
                             <constraint firstItem="3ov-vi-gKd" firstAttribute="top" secondItem="3Mo-d0-lT4" secondAttribute="bottom" constant="10" id="CDN-lw-O8O"/>
-                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="HwD-Za-S5O"/>
-                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="UgK-j6-PxW"/>
-                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="15" id="diP-7d-QRP"/>
-                            <constraint firstItem="3ov-vi-gKd" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="gcR-Ia-d0p"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="LO8-Rc-MlQ"/>
+                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="VLF-us-PA9"/>
+                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="VWx-P1-Bd0"/>
+                            <constraint firstAttribute="bottom" secondItem="U3Y-50-w7Q" secondAttribute="bottom" id="nMK-Ed-xeG"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3Mo-d0-lT4" secondAttribute="trailing" constant="5" id="oVX-bF-PfC"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="U3Y-50-w7Q" secondAttribute="bottom" constant="15" id="w0M-XT-i2K"/>
+                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="wRn-52-wTi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -68,9 +63,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="33.283358320839582"/>
         </scene>
     </scenes>
     <resources>
-        <image name="hero_2x" width="1424" height="1104"/>
+        <image name="wwdc_small" width="736" height="548"/>
     </resources>
 </document>
