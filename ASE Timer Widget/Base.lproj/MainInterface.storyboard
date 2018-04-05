@@ -26,11 +26,11 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-vi-gKd">
                                 <rect key="frame" x="137" y="56.5" width="178" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_small" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_widget" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
                                 <rect key="frame" x="0.0" y="0.0" width="132" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U3Y-50-w7Q" secondAttribute="height" multiplier="18:15" id="asf-td-KDb"/>
@@ -67,6 +67,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wwdc_small" width="736" height="548"/>
+        <image name="wwdc_widget" width="698" height="582"/>
     </resources>
 </document>
