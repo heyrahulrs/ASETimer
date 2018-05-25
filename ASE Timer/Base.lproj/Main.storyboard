@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,23 +15,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ASE_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_small" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-44-XqV">
-                                <rect key="frame" x="0.0" y="515" width="375" height="297"/>
+                                <rect key="frame" x="0.0" y="370" width="375" height="297"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xZi-44-XqV" secondAttribute="height" multiplier="24:19" id="dF6-gE-a8u"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
-                                <rect key="frame" x="88.666666666666671" y="144" width="198.33333333333331" height="38.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <rect key="frame" x="64.5" y="120" width="247" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-vh-TfF">
-                                <rect key="frame" x="47.666666666666657" y="222.33333333333337" width="280" height="79"/>
+                                <rect key="frame" x="47.5" y="208" width="280" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="VCY-QY-klT"/>
                                 </constraints>
@@ -41,20 +41,21 @@ San Jose, CA, June 4–8</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
-                                <rect key="frame" x="40" y="351.33333333333331" width="295" height="68.666666666666686"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
+                                <rect key="frame" x="40" y="337" width="295" height="56.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-w6-4h1">
-                                <rect key="frame" x="125" y="440" width="124.66666666666669" height="27.333333333333314"/>
+                                <rect key="frame" x="125" y="413.5" width="124.5" height="27.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="top" secondItem="2Tb-4Z-Ity" secondAttribute="bottom" constant="40" id="2GV-OE-hrr"/>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jm-P9-gM2"/>
@@ -71,12 +72,20 @@ San Jose, CA, June 4–8</string>
                             <constraint firstItem="xZi-44-XqV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yRl-32-FZP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fb3-pf-N8g" appends="YES" id="o5g-NG-k6a"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="countdownTimerLabel" destination="eFP-Dx-nye" id="KrO-rB-205"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="fb3-pf-N8g">
+                    <connections>
+                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="KNF-YJ-C9M"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140" y="133.74384236453201"/>
         </scene>
