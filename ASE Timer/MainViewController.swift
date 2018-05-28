@@ -53,20 +53,52 @@ class MainViewController: UIViewController {
         var image: UIImage?
         
         if days != 0 {
-            countdownTimerLabel.text = "\(days) days"
+            
+            if days % 7 == 0 {
+                
+                let weeks = days / 7
+                
+                if weeks == 1 {
+                    countdownTimerLabel.text = "\(weeks) week"
+                }else{
+                    countdownTimerLabel.text = "\(weeks) weeks"
+                }
+                
+            }else{
+                
+                if days == 1 {
+                    countdownTimerLabel.text = "\(days) day"
+                }else{
+                    countdownTimerLabel.text = "\(days) days"
+                }
+                
+            }
+            
             image = takeScreenshot(of: view)
             countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
+            
         }else if hours != 0 {
-            countdownTimerLabel.text = "\(hours) hours"
+            
+            if hours == 1 {
+                countdownTimerLabel.text = "\(hours) hour"
+            }else{
+                countdownTimerLabel.text = "\(hours) hours"
+            }
+            
             image = takeScreenshot(of: view)
             countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
-        }else if minutes != 0 {
+            
+        }else if minutes % 5 == 0 {
+            
             countdownTimerLabel.text = "\(minutes) minutes"
             image = takeScreenshot(of: view)
             countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
+            
         }
         
-        let viewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        guard let screenshot = image else { return }
+        
+        let viewController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
         self.present(viewController, animated: true)
         
     }
