@@ -17,24 +17,59 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
 
         let eventUnixTime: TimeInterval = 1528131600
+        let currentUnixTime = Date().timeIntervalSince1970
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
+
+        if secondsUntilEvent <= 0 {
+            self.countdownTimerLabel.text = "Keynote is now streaming live."
+            return
+        }
+        
+        let days = Int(secondsUntilEvent / 86400)
+        let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
+        let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
+        
+        if days != 0 {
             
-            let currentUnixTime = Date().timeIntervalSince1970
-            
-            let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
-            
-            if secondsUntilEvent <= 0 {
-                self.countdownTimerLabel.text = "Keynote is now streaming live."
-                return
+            if days % 7 == 0 {
+                
+                let weeks = days / 7
+                
+                if weeks == 1 {
+                    countdownTimerLabel.text = "\(weeks) week"
+                }else{
+                    countdownTimerLabel.text = "\(weeks) weeks"
+                }
+                
+            }else{
+                
+                if days == 1 {
+                    countdownTimerLabel.text = "\(days) day"
+                }else{
+                    countdownTimerLabel.text = "\(days) days"
+                }
+                
             }
             
-            let days = Int(secondsUntilEvent / 86400)
-            let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
-            let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
-            let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
+        }else if hours != 0 {
             
-            self.countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
+            if hours == 1 {
+                countdownTimerLabel.text = "\(hours) hour"
+            }else{
+                countdownTimerLabel.text = "\(hours) hours"
+            }
+            
+        }else if minutes != 0 {
+            
+            if minutes == 1 {
+                countdownTimerLabel.text = "\(minutes) minute"
+            }else{
+                countdownTimerLabel.text = "\(minutes) minutes"
+            }
+            
+        }else{
+            countdownTimerLabel.text = "Keynote is now streaming live."
         }
         
     }

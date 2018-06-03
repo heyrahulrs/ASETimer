@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,36 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mo-d0-lT4">
-                                <rect key="frame" x="137" y="15" width="178" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-vi-gKd">
-                                <rect key="frame" x="142" y="61" width="168" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <rect key="frame" x="151" y="31.5" width="19" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_widget" translatesAutoresizingMaskIntoConstraints="NO" id="U3Y-50-w7Q">
-                                <rect key="frame" x="0.0" y="0.0" width="132" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="U3Y-50-w7Q" secondAttribute="height" multiplier="18:15" id="asf-td-KDb"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8784313725490196" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="0AX-ap-G9D"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3ov-vi-gKd" secondAttribute="trailing" constant="10" id="43o-8t-DrM"/>
-                            <constraint firstItem="3ov-vi-gKd" firstAttribute="top" secondItem="3Mo-d0-lT4" secondAttribute="bottom" constant="10" id="CDN-lw-O8O"/>
-                            <constraint firstItem="3ov-vi-gKd" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="10" id="LO8-Rc-MlQ"/>
-                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="VLF-us-PA9"/>
-                            <constraint firstItem="U3Y-50-w7Q" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="VWx-P1-Bd0"/>
-                            <constraint firstAttribute="bottom" secondItem="U3Y-50-w7Q" secondAttribute="bottom" id="nMK-Ed-xeG"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3Mo-d0-lT4" secondAttribute="trailing" constant="5" id="oVX-bF-PfC"/>
-                            <constraint firstItem="3Mo-d0-lT4" firstAttribute="leading" secondItem="U3Y-50-w7Q" secondAttribute="trailing" constant="5" id="wRn-52-wTi"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="5ju-wg-rKz"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Hz4-4S-ivZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -66,7 +46,4 @@
             <point key="canvasLocation" x="33.600000000000001" y="33.283358320839582"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="wwdc_widget" width="698" height="582"/>
-    </resources>
 </document>

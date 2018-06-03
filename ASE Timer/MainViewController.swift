@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var countdownTimerLabel: UILabel!
+    @IBOutlet weak var eventDateAndTimeLabel: UILabel!
     
     var days = 0
     var hours = 0
@@ -22,7 +23,15 @@ class MainViewController: UIViewController {
 
         let eventUnixTime: TimeInterval = 1528131600
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        
+        let date = Date(timeIntervalSince1970: eventUnixTime)
+        
+        eventDateAndTimeLabel.text = dateFormatter.string(from: date).uppercased()
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             
             let currentUnixTime = Date().timeIntervalSince1970
             
@@ -30,6 +39,7 @@ class MainViewController: UIViewController {
             
             if secondsUntilEvent <= 0 {
                 self.countdownTimerLabel.text = "Keynote is now streaming live."
+                timer.invalidate()
                 return
             }
             
