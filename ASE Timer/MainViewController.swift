@@ -10,8 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var eventHeadingLabel: UILabel!
+    @IBOutlet weak var eventDescriptionLabel: UILabel!
     @IBOutlet weak var countdownTimerLabel: UILabel!
     @IBOutlet weak var eventDateAndTimeLabel: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     var days = 0
     var hours = 0
@@ -37,6 +40,16 @@ class MainViewController: UIViewController {
             
             let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
             
+            if secondsUntilEvent <= 7200 {
+                self.eventHeadingLabel.text = self.eventNamePrediction()
+                self.eventDescriptionLabel.text = ""
+                self.countdownTimerLabel.text = " - "
+                self.eventDateAndTimeLabel.text = "Date not known yet".uppercased()
+                self.backgroundImageView.image = nil
+                timer.invalidate()
+                return
+            }
+            
             if secondsUntilEvent <= 0 {
                 self.countdownTimerLabel.text = "Keynote is now streaming live."
                 timer.invalidate()
@@ -53,7 +66,19 @@ class MainViewController: UIViewController {
             self.hours = hours
             self.seconds = seconds
             
-            self.countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
+            
+            if days != 0 {
+                self.countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
+            }
+            
+            if days == 0 {
+                self.countdownTimerLabel.text = "\(hours)h \(minutes)m \(seconds)s"
+            }else if hours == 0 {
+                self.countdownTimerLabel.text = "\(minutes)m \(seconds)s"
+            }else if minutes == 0 {
+                self.countdownTimerLabel.text = "\(seconds)s"
+            }
+            
         }
         
     }
@@ -85,7 +110,6 @@ class MainViewController: UIViewController {
             }
             
             image = takeScreenshot(of: view)
-            countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
             
         }else if hours != 0 {
             
@@ -96,13 +120,11 @@ class MainViewController: UIViewController {
             }
             
             image = takeScreenshot(of: view)
-            countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
             
         }else if minutes % 5 == 0 {
             
             countdownTimerLabel.text = "\(minutes) minutes"
             image = takeScreenshot(of: view)
-            countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
             
         }
         
@@ -121,5 +143,31 @@ class MainViewController: UIViewController {
         return image
     }
 
+    func eventNamePrediction() -> String {
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM"
+        
+        
+        let month = Int(dateFormatter.string(from: date))!
+        
+        switch month {
+        case 9...12, 1...3:
+            return "Apple March Event"
+            
+        case 4...5:
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY"
+            let year = dateFormatter.string(from: date)
+            return "WWDC \(year)"
+            
+        case 6...8:
+            return "Apple September Event"
+            
+        default:
+            return "Next Apple Event"
+        }
+    }
 }
 

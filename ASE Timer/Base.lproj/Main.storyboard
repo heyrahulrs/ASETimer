@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,44 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc_small" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-44-XqV">
-                                <rect key="frame" x="0.0" y="370" width="375" height="297"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xZi-44-XqV" secondAttribute="height" multiplier="24:19" id="dF6-gE-a8u"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-44-XqV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
-                                <rect key="frame" x="64.5" y="104" width="247" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
+                                <rect key="frame" x="34" y="104" width="307" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-vh-TfF">
-                                <rect key="frame" x="47.5" y="192" width="280" height="79"/>
+                                <rect key="frame" x="47.5" y="192" width="280" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="VCY-QY-klT"/>
                                 </constraints>
                                 <string key="text">Apple Worldwide Developers Conference
 San Jose, CA</string>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
-                                <rect key="frame" x="40" y="330.5" width="295" height="56.5"/>
+                                <rect key="frame" x="40" y="323.5" width="295" height="56.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-w6-4h1">
-                                <rect key="frame" x="122.5" y="405" width="130" height="24"/>
+                                <rect key="frame" x="122.5" y="398" width="130" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-kW-GLb">
-                                <rect key="frame" x="134.5" y="289" width="106.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE AND TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-kW-GLb">
+                                <rect key="frame" x="126" y="282" width="123" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,19 +62,20 @@ San Jose, CA</string>
                         <constraints>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="top" secondItem="2Tb-4Z-Ity" secondAttribute="bottom" constant="40" id="2GV-OE-hrr"/>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jm-P9-gM2"/>
+                            <constraint firstItem="xZi-44-XqV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4i8-4b-TKk"/>
                             <constraint firstItem="qwQ-kW-GLb" firstAttribute="top" secondItem="kr3-vh-TfF" secondAttribute="bottom" constant="18" id="FFr-gE-quV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Tb-4Z-Ity" secondAttribute="trailing" constant="34" id="HOg-d6-EOH"/>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="qwQ-kW-GLb" secondAttribute="bottom" constant="22" id="IF0-cK-dLG"/>
                             <constraint firstItem="t93-w6-4h1" firstAttribute="top" secondItem="eFP-Dx-nye" secondAttribute="bottom" constant="18" id="J4b-Un-7ZE"/>
-                            <constraint firstItem="xZi-44-XqV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O0e-T7-MON"/>
                             <constraint firstItem="2Tb-4Z-Ity" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="O8n-tB-a8g"/>
                             <constraint firstItem="t93-w6-4h1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohn-9L-hkd"/>
-                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P8b-db-89b"/>
-                            <constraint firstAttribute="bottom" secondItem="xZi-44-XqV" secondAttribute="bottom" id="RnY-oQ-C1A"/>
+                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="POB-fi-BYH"/>
+                            <constraint firstItem="xZi-44-XqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXe-mJ-n3m"/>
                             <constraint firstItem="qwQ-kW-GLb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXV-58-R1C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xZi-44-XqV" secondAttribute="trailing" id="iyv-6Q-0h1"/>
+                            <constraint firstAttribute="trailing" secondItem="xZi-44-XqV" secondAttribute="trailing" id="nbT-Ka-y5F"/>
+                            <constraint firstAttribute="bottom" secondItem="xZi-44-XqV" secondAttribute="bottom" id="ni5-Yl-YuW"/>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ois-IR-uiM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFP-Dx-nye" secondAttribute="trailing" constant="40" id="rig-WF-WJc"/>
-                            <constraint firstItem="xZi-44-XqV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yRl-32-FZP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -85,8 +83,11 @@ San Jose, CA</string>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="xZi-44-XqV" id="DED-uT-aJO"/>
                         <outlet property="countdownTimerLabel" destination="eFP-Dx-nye" id="KrO-rB-205"/>
                         <outlet property="eventDateAndTimeLabel" destination="qwQ-kW-GLb" id="FDL-70-hqd"/>
+                        <outlet property="eventDescriptionLabel" destination="kr3-vh-TfF" id="oXh-Ov-a8B"/>
+                        <outlet property="eventHeadingLabel" destination="2Tb-4Z-Ity" id="QT7-XX-Bat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,7 +100,4 @@ San Jose, CA</string>
             <point key="canvasLocation" x="140" y="133.74384236453201"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="wwdc_small" width="736" height="548"/>
-    </resources>
 </document>

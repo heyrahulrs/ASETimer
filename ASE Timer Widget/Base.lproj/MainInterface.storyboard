@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-vi-gKd">
-                                <rect key="frame" x="151" y="31.5" width="19" height="48"/>
+                                <rect key="frame" x="18" y="18" width="284" height="74"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,8 +27,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3ov-vi-gKd" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="5ju-wg-rKz"/>
-                            <constraint firstItem="3ov-vi-gKd" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Hz4-4S-ivZ"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="18" id="OES-F3-cJd"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3ov-vi-gKd" secondAttribute="trailing" constant="18" id="XGK-NA-abS"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="3ov-vi-gKd" secondAttribute="bottom" constant="18" id="jMW-EQ-r56"/>
+                            <constraint firstItem="3ov-vi-gKd" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="18" id="sLb-zZ-Loi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>

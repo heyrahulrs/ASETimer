@@ -20,9 +20,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let currentUnixTime = Date().timeIntervalSince1970
         
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
+        
+        if secondsUntilEvent <= 7200 {
+            self.countdownTimerLabel.text = "Date not known yet".uppercased()
+            self.countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
+            self.countdownTimerLabel.alpha = 0.8
+            return
+        }
 
         if secondsUntilEvent <= 0 {
-            self.countdownTimerLabel.text = "Keynote is now streaming live."
+            self.countdownTimerLabel.text = "Keynote is now streaming live.".uppercased()
+            self.countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
+            self.countdownTimerLabel.alpha = 0.8
             return
         }
         
