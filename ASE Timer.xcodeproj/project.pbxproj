@@ -17,6 +17,7 @@
 		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
+		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		2049DD2E1F5BC8810070A19D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2049DD311F5BC8810070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				2049DD131F5BC4960070A19D /* AppDelegate.swift */,
 				2049DD151F5BC4960070A19D /* MainViewController.swift */,
+				20AD014A20EDD93300CA1386 /* ASE.swift */,
 				2049DD171F5BC4960070A19D /* Main.storyboard */,
 				2049DD1A1F5BC4960070A19D /* Assets.xcassets */,
 				2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */,
@@ -179,6 +182,11 @@
 					2049DD0F1F5BC4960070A19D = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					2049DD281F5BC8810070A19D = {
 						CreatedOnToolsVersion = 9.0;
@@ -232,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
 				2049DD161F5BC4960070A19D /* MainViewController.swift in Sources */,
 				2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */,
 			);

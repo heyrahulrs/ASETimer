@@ -16,12 +16,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let eventUnixTime: TimeInterval = 1528131600
+        let eventUnixTime: TimeInterval = 1528131600 //CHANGE THIS WHEN EVENT IS ANNOUNCED
         let currentUnixTime = Date().timeIntervalSince1970
         
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
-        if secondsUntilEvent <= 7200 {
+        if secondsUntilEvent <= -7200 {
             self.countdownTimerLabel.text = "Date not known yet".uppercased()
             self.countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
             self.countdownTimerLabel.alpha = 0.8
@@ -38,7 +38,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let days = Int(secondsUntilEvent / 86400)
         let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
         let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
-        
+        let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
+
         if days != 0 {
             
             if days % 7 == 0 {
@@ -77,8 +78,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 countdownTimerLabel.text = "\(minutes) minutes"
             }
             
-        }else{
-            countdownTimerLabel.text = "Keynote is now streaming live."
+        }else if seconds <= -7200 {
+            countdownTimerLabel.text = "Keynote is over.".uppercased()
+        }else if seconds <= 0 {
+            countdownTimerLabel.text = "Keynote is now streaming live".uppercased()
         }
         
     }

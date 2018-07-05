@@ -22,56 +22,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
-                                <rect key="frame" x="34" y="104" width="307" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="34" y="104" width="307" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="38"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-vh-TfF">
-                                <rect key="frame" x="47.5" y="192" width="280" height="72"/>
+                                <rect key="frame" x="47.5" y="189.5" width="280" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="VCY-QY-klT"/>
                                 </constraints>
                                 <string key="text">Apple Worldwide Developers Conference
 San Jose, CA</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
-                                <rect key="frame" x="40" y="323.5" width="295" height="56.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="41"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="40" y="347" width="295" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-w6-4h1">
-                                <rect key="frame" x="122.5" y="398" width="130" height="24"/>
+                                <rect key="frame" x="122.5" y="625" width="130" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE AND TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-kW-GLb">
-                                <rect key="frame" x="126" y="282" width="123" height="19.5"/>
+                                <rect key="frame" x="126" y="279.5" width="123" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4iF-eX-sod">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8784313725490196" green="0.89411764705882346" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="top" secondItem="2Tb-4Z-Ity" secondAttribute="bottom" constant="40" id="2GV-OE-hrr"/>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jm-P9-gM2"/>
                             <constraint firstItem="xZi-44-XqV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4i8-4b-TKk"/>
                             <constraint firstItem="qwQ-kW-GLb" firstAttribute="top" secondItem="kr3-vh-TfF" secondAttribute="bottom" constant="18" id="FFr-gE-quV"/>
+                            <constraint firstItem="4iF-eX-sod" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G0k-As-pIt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Tb-4Z-Ity" secondAttribute="trailing" constant="34" id="HOg-d6-EOH"/>
-                            <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="qwQ-kW-GLb" secondAttribute="bottom" constant="22" id="IF0-cK-dLG"/>
-                            <constraint firstItem="t93-w6-4h1" firstAttribute="top" secondItem="eFP-Dx-nye" secondAttribute="bottom" constant="18" id="J4b-Un-7ZE"/>
+                            <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="qwQ-kW-GLb" secondAttribute="bottom" constant="48" id="IF0-cK-dLG"/>
                             <constraint firstItem="2Tb-4Z-Ity" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="O8n-tB-a8g"/>
                             <constraint firstItem="t93-w6-4h1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohn-9L-hkd"/>
                             <constraint firstItem="2Tb-4Z-Ity" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="POB-fi-BYH"/>
                             <constraint firstItem="xZi-44-XqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXe-mJ-n3m"/>
+                            <constraint firstItem="4iF-eX-sod" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rfn-a8-ilR"/>
                             <constraint firstItem="qwQ-kW-GLb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXV-58-R1C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t93-w6-4h1" secondAttribute="bottom" constant="18" id="lZj-yW-SIF"/>
                             <constraint firstAttribute="trailing" secondItem="xZi-44-XqV" secondAttribute="trailing" id="nbT-Ka-y5F"/>
                             <constraint firstAttribute="bottom" secondItem="xZi-44-XqV" secondAttribute="bottom" id="ni5-Yl-YuW"/>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ois-IR-uiM"/>
@@ -83,6 +90,7 @@ San Jose, CA</string>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="4iF-eX-sod" id="odX-G7-SWX"/>
                         <outlet property="backgroundImageView" destination="xZi-44-XqV" id="DED-uT-aJO"/>
                         <outlet property="countdownTimerLabel" destination="eFP-Dx-nye" id="KrO-rB-205"/>
                         <outlet property="eventDateAndTimeLabel" destination="qwQ-kW-GLb" id="FDL-70-hqd"/>
