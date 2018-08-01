@@ -9,81 +9,77 @@
 import UIKit
 import NotificationCenter
 
+typealias time = (days: Int, hours: Int, minutes: Int, seconds: Int)
+
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet weak var countdownTimerLabel: UILabel!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let eventUnixTime: TimeInterval = 1528131600 //CHANGE THIS WHEN EVENT IS ANNOUNCED
+        
+        NetworkService.shared.downloadEventInfo { (event) in
+            
+            if let eventUnixTime = event.unixTime {
+                self.updateUI(for: eventUnixTime)
+            }else{
+                self.updateCountdownLabel(with: "Date not known yet")
+            }
+            
+        }
+        
+    }
+    
+    fileprivate func updateUI(for eventUnixTime: TimeInterval) {
+        
+        let eventUnixTime: TimeInterval = eventUnixTime
         let currentUnixTime = Date().timeIntervalSince1970
         
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
         if secondsUntilEvent <= -7200 {
-            self.countdownTimerLabel.text = "Date not known yet".uppercased()
-            self.countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
-            self.countdownTimerLabel.alpha = 0.8
+            updateCountdownLabel(with: "Date not known yet")
             return
-        }
-
-        if secondsUntilEvent <= 0 {
-            self.countdownTimerLabel.text = "Keynote is now streaming live.".uppercased()
-            self.countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
-            self.countdownTimerLabel.alpha = 0.8
+        }else if secondsUntilEvent <= 0 {
+            updateCountdownLabel(with: "Keynote is now streaming live.")
             return
         }
         
+        let (days, hours, minutes, _) = getDaysHoursMinutesSeconds(from: secondsUntilEvent)
+        
+        var text = ""
+        
+        if days != 0 {
+            
+            if days % 7 == 0 {
+                let weeks = days / 7
+                 text = weeks == 1 ? "\(weeks) week" : "\(weeks) weeks"
+            }else{
+                text = days == 1 ? "\(days) day" : "\(days) days"
+            }
+            
+        }else if hours != 0 {
+            text = hours == 1 ? "\(hours) hour" : "\(hours) hours"
+        }else if minutes != 0 {
+            text = minutes == 1 ? "\(minutes) minute" : "\(minutes) minutes"
+        }
+        
+        countdownTimerLabel.text = text
+        
+    }
+    
+    fileprivate func updateCountdownLabel(with text: String) {
+        countdownTimerLabel.text = text.uppercased()
+        countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
+        countdownTimerLabel.alpha = 0.8
+    }
+    
+    fileprivate func getDaysHoursMinutesSeconds(from secondsUntilEvent: Double) -> time {
         let days = Int(secondsUntilEvent / 86400)
         let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
         let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
         let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
-
-        if days != 0 {
-            
-            if days % 7 == 0 {
-                
-                let weeks = days / 7
-                
-                if weeks == 1 {
-                    countdownTimerLabel.text = "\(weeks) week"
-                }else{
-                    countdownTimerLabel.text = "\(weeks) weeks"
-                }
-                
-            }else{
-                
-                if days == 1 {
-                    countdownTimerLabel.text = "\(days) day"
-                }else{
-                    countdownTimerLabel.text = "\(days) days"
-                }
-                
-            }
-            
-        }else if hours != 0 {
-            
-            if hours == 1 {
-                countdownTimerLabel.text = "\(hours) hour"
-            }else{
-                countdownTimerLabel.text = "\(hours) hours"
-            }
-            
-        }else if minutes != 0 {
-            
-            if minutes == 1 {
-                countdownTimerLabel.text = "\(minutes) minute"
-            }else{
-                countdownTimerLabel.text = "\(minutes) minutes"
-            }
-            
-        }else if seconds <= -7200 {
-            countdownTimerLabel.text = "Keynote is over.".uppercased()
-        }else if seconds <= 0 {
-            countdownTimerLabel.text = "Keynote is now streaming live".uppercased()
-        }
-        
+        return (days, hours, minutes, seconds)
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {

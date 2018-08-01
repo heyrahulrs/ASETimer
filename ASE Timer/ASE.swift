@@ -6,7 +6,7 @@
 //  Copyright © 2018 Rahul Sharma. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ASE {
     
@@ -15,26 +15,39 @@ class ASE {
     var unixTime: TimeInterval?
     
     var backgroundImageURL: URL?
+    var backgroundImage: UIImage?
     
     init(json: [String: Any]) {
         
-        guard let title = json["title"] as? String else { return }
-        self.title = title
+        if let title = json["title"] as? String {
+            self.title = title
+        }
 
-        guard let description = json["description"] as? String else { return }
-        self.description = description
+        if let description = json["description"] as? String {
+            self.description = description
+        }
 
-        guard let unixTime = json["eventUnixTime"] as? TimeInterval else { return }
-        self.unixTime = unixTime
+        if let unixTime = json["eventUnixTime"] as? TimeInterval {
+            self.unixTime = unixTime
+        }
 
-        guard let backgroundImage = json["backgroundImageURL"] as? String,
-            let backgroundImageURL = URL(string: backgroundImage) else { return }
-        self.backgroundImageURL = backgroundImageURL
+        if let backgroundImageDictionary = json["backgroundImageURL"] as? [String: Any] {
+            let deviceName = UIDevice.deviceName.rawValue
+            if let backgroundImage = backgroundImageDictionary[deviceName] as? String {
+                let backgroundImageURL = URL(string: backgroundImage)
+                self.backgroundImageURL = backgroundImageURL
+            }
+        }
         
     }
     
-    func downloadBackgroundImage(completion: () -> ()) {
-        //DOWNLOAD BACKGROUND IMAGE
+    func downloadBackgroundImage(_ completion: @escaping () -> Void) {
+        NetworkService.shared.downloadBackgroundImage(for: self) { (image) in
+            self.backgroundImage = image
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
     }
     
 }

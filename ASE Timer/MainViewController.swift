@@ -8,140 +8,80 @@
 
 import UIKit
 
-var databaseURL: URL? {
-    let url = URL(string: "https://asetimer.firebaseio.com/.json")
-    return url
-}
-
-var key: String {
-    return "event-json"
-}
+typealias time = (days: Int, hours: Int, minutes: Int, seconds: Int)
 
 class MainViewController: UIViewController {
     
+    //MARK: - OUTLETS
+    
     @IBOutlet weak var eventHeadingLabel: UILabel!
     @IBOutlet weak var eventDescriptionLabel: UILabel!
-    @IBOutlet weak var countdownTimerLabel: UILabel!
     @IBOutlet weak var eventDateAndTimeLabel: UILabel!
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var countdownTimerLabel: UILabel!
     
-    var days = 0
-    var hours = 0
-    var minutes = 0
-    var seconds = 0
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    //MARK: - VARIABLES
     
     var event: ASE!
-
+    var timer: Timer!
+    var time: time = (0, 0, 0, 0)
+    
+    //MARK: - UI KIT METHODS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.startAnimating()
+        resetUI()
         
+        NetworkService.shared.downloadEventInfo { (event) in
+            self.event = event
+            self.setupTimer()
+        }
+        
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+        print("Refreshing details")
+        
+        resetUI()
+        
+        NetworkService.shared.downloadEventInfo { (event) in
+            self.event = event
+            self.setupTimer()
+        }
+        
+    }
+    
+    //MARK: - FILEPRIVATE FUNCTIONS
+    
+    fileprivate func resetUI() {
         eventHeadingLabel.text = " "
         eventDescriptionLabel.text = "\n\n\n"
         eventDateAndTimeLabel.text = " "
         countdownTimerLabel.text = " - "
+        backgroundImageView.image = nil
+    }
+    
+    fileprivate func setupTimer() {
         
-        let defaults = UserDefaults.standard
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.updateLabels()
+        }
         
-        if let json = defaults.dictionary(forKey: key) {
-            
-            print("Event Info already saved in device.")
-            self.event = ASE(json: json)
-            
-            guard let eventUnixTime: Double = event.unixTime else {
-                defaults.removeObject(forKey: key)
-                getInfo()
-                return
-            }
-
-            let currentUnixTime: Double = Date().timeIntervalSince1970
-            
-            if currentUnixTime > eventUnixTime + 7200 {
-                print("Event Over")
-                defaults.removeObject(forKey: key)
-                getInfo()
-                return
-            }
-            
-            setupTimer()
-            
-        }else{
-            print("No Event Info saved in device. Downloading data from server.")
-            getInfo()
+        event.downloadBackgroundImage {
+            self.backgroundImageView.image = self.event.backgroundImage
         }
         
     }
     
-    func getInfo() {
-        
-        guard let databaseURL = databaseURL else {
-            print("Error: cannot create URL")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: databaseURL) { (data, response, error) in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let data = data else {
-                print("Error: did not receive data")
-                return
-            }
-            
-            do {
-                
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-                    print("Data not convertable to JSON")
-                    return
-                }
-                
-                self.event = ASE(json: json)
-                
-                //SAVE TO DEVICE
-                let defaults = UserDefaults.standard
-                defaults.set(json, forKey: key)
-                
-                DispatchQueue.main.sync {
-                    self.setupTimer()
-                }
-            
-
-            } catch{
-                print("error trying to convert data to JSON")
-                return
-            }
-            
-        }
-        
-        task.resume()
-        
-    }
-    
-    func setupTimer() {
-                
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.updateLabels(at: timer)
-        }
-        
-    }
-    
-    func updateLabels(at timer: Timer) {
-        
-        activityIndicator.stopAnimating()
+    fileprivate func updateLabels() {
         
         eventHeadingLabel.text = event.title
         eventDescriptionLabel.text = event.description ?? ""
         
         guard let eventUnixTime = event.unixTime else {
-            print("No Event Available at this time")
-            self.eventDateAndTimeLabel.text = "Date not known yet".uppercased()
-            self.backgroundImageView.image = nil
-            removeObjectFromDevice()
             timer.invalidate()
             return
         }
@@ -158,42 +98,30 @@ class MainViewController: UIViewController {
         
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
-        if secondsUntilEvent <= -7200 {
-            print("Event already concluded")
-            print("Resetting Data")
-            self.eventHeadingLabel.text = self.eventNamePrediction()
-            self.eventDescriptionLabel.text = ""
-            self.countdownTimerLabel.text = " - "
-            self.eventDateAndTimeLabel.text = "Date not known yet".uppercased()
-            self.backgroundImageView.image = nil
-            removeObjectFromDevice()
+        if secondsUntilEvent <= -7200 { //Event already concluded
+            resetUI()
+            eventHeadingLabel.text = eventNamePrediction
             timer.invalidate()
             return
-        }
-        
-        if secondsUntilEvent <= 0 {
+        }else if secondsUntilEvent <= 0 { //Keynote is now streaming live.
             self.countdownTimerLabel.text = "Keynote is now streaming live."
-            removeObjectFromDevice()
             timer.invalidate()
             return
         }
         
-        let days = Int(secondsUntilEvent / 86400)
-        let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
-        let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
-        let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
+        time = getDaysHoursMinutesSeconds(from: secondsUntilEvent)
         
-        self.days = days
-        self.minutes = minutes
-        self.hours = hours
-        self.seconds = seconds
+        updateCountdownLabel(for: time)
         
+    }
+    
+    fileprivate func updateCountdownLabel(for time: time) {
+        
+        let (days, hours, minutes, seconds) = time
         
         if days != 0 {
             countdownTimerLabel.text = "\(days)d \(hours)h \(minutes)m \(seconds)s"
-        }
-        
-        if days == 0 {
+        }else if days == 0 {
             countdownTimerLabel.text = "\(hours)h \(minutes)m \(seconds)s"
         }else if hours == 0 {
             countdownTimerLabel.text = "\(minutes)m \(seconds)s"
@@ -203,9 +131,13 @@ class MainViewController: UIViewController {
         
     }
     
+    //MARK: - ACTIONS
+    
     @IBAction func didLongPress(_ sender: UILongPressGestureRecognizer) {
         
         var image: UIImage?
+        
+        let (days, hours, minutes, _) = time
         
         if days != 0 {
             
@@ -255,6 +187,8 @@ class MainViewController: UIViewController {
         
     }
     
+    //MARK: - FUNCTIONS
+    
     func takeScreenshot(of view: UIView) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
         let image = renderer.image { ctx in
@@ -263,7 +197,7 @@ class MainViewController: UIViewController {
         return image
     }
 
-    func eventNamePrediction() -> String {
+    var eventNamePrediction: String {
         
         let date = Date()
         let dateFormatter = DateFormatter()
@@ -290,10 +224,12 @@ class MainViewController: UIViewController {
         }
     }
     
-    func removeObjectFromDevice() {
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: key)
+    func getDaysHoursMinutesSeconds(from secondsUntilEvent: Double) -> time {
+        let days = Int(secondsUntilEvent / 86400)
+        let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
+        let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
+        let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
+        return (days, hours, minutes, seconds)
     }
-    
 }
 

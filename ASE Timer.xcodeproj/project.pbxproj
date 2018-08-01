@@ -17,7 +17,12 @@
 		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
+		207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
+		208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
+		208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
 		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
+		20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
+		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,8 @@
 		2049DD2E1F5BC8810070A19D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2049DD311F5BC8810070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207285FA2105D1920022B2A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		208FC41121118B41000228E0 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +110,8 @@
 			children = (
 				2049DD131F5BC4960070A19D /* AppDelegate.swift */,
 				2049DD151F5BC4960070A19D /* MainViewController.swift */,
+				207285FA2105D1920022B2A9 /* NetworkService.swift */,
+				208FC41121118B41000228E0 /* UIDevice-Extension.swift */,
 				20AD014A20EDD93300CA1386 /* ASE.swift */,
 				2049DD171F5BC4960070A19D /* Main.storyboard */,
 				2049DD1A1F5BC4960070A19D /* Assets.xcassets */,
@@ -242,6 +251,8 @@
 			files = (
 				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
 				2049DD161F5BC4960070A19D /* MainViewController.swift in Sources */,
+				207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */,
+				208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */,
 				2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */,
+				20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */,
 				2049DD2F1F5BC8810070A19D /* TodayViewController.swift in Sources */,
+				208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
