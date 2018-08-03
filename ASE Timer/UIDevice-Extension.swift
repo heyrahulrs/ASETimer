@@ -16,7 +16,7 @@ extension UIDevice {
         case iPhone8 = "iPhone8"
         case iPhone8Plus = "iPhone8Plus"
         case iPhoneX = "iPhoneX"
-        case unknown = "UnknownDevice"
+        case unknown = "iPad"
     }
     
     static var deviceName: DeviceName {

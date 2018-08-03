@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
         NetworkService.shared.downloadEventInfo { (event) in
             self.event = event
             self.setupTimer()
+            self.setBackgroundImage()
         }
         
     }
@@ -50,6 +51,7 @@ class MainViewController: UIViewController {
         NetworkService.shared.downloadEventInfo { (event) in
             self.event = event
             self.setupTimer()
+            self.setBackgroundImage()
         }
         
     }
@@ -60,8 +62,25 @@ class MainViewController: UIViewController {
         eventHeadingLabel.text = " "
         eventDescriptionLabel.text = "\n\n\n"
         eventDateAndTimeLabel.text = " "
-        countdownTimerLabel.text = " - "
+        countdownTimerLabel.text = "-"
         backgroundImageView.image = nil
+    }
+    
+    fileprivate func setBackgroundImage() {
+        
+        let eventTitle = event.title.replacingOccurrences(of:" ", with: "")
+        let imageName = "\(eventTitle)-\(UIDevice.deviceName.rawValue)"
+        
+        print(imageName)
+        
+        if let backgroundImage = UIImage(named: imageName) {
+            backgroundImageView.image = backgroundImage
+        }else{
+            event.downloadBackgroundImage {
+                self.backgroundImageView.image = self.event.backgroundImage
+            }
+        }
+        
     }
     
     fileprivate func setupTimer() {
@@ -70,16 +89,12 @@ class MainViewController: UIViewController {
             self.updateLabels()
         }
         
-        event.downloadBackgroundImage {
-            self.backgroundImageView.image = self.event.backgroundImage
-        }
-        
     }
     
     fileprivate func updateLabels() {
         
         eventHeadingLabel.text = event.title
-        eventDescriptionLabel.text = event.description ?? ""
+        eventDescriptionLabel.text = event.description
         
         guard let eventUnixTime = event.unixTime else {
             timer.invalidate()
@@ -231,5 +246,6 @@ class MainViewController: UIViewController {
         let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
         return (days, hours, minutes, seconds)
     }
+    
 }
 

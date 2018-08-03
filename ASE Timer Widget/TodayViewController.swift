@@ -38,7 +38,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
         if secondsUntilEvent <= -7200 {
-            updateCountdownLabel(with: "Date not known yet")
+            updateCountdownLabel(with: "Event has been concluded.")
             return
         }else if secondsUntilEvent <= 0 {
             updateCountdownLabel(with: "Keynote is now streaming live.")

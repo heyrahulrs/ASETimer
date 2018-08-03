@@ -10,8 +10,8 @@ import UIKit
 
 class ASE {
     
-    var title: String!
-    var description: String?
+    var title: String = ""
+    var description: String = ""
     var unixTime: TimeInterval?
     
     var backgroundImageURL: URL?
@@ -31,23 +31,32 @@ class ASE {
             self.unixTime = unixTime
         }
 
-        if let backgroundImageDictionary = json["backgroundImageURL"] as? [String: Any] {
+        if let dictionary = json["backgroundImageURL"] as? [String: Any] {
+            
             let deviceName = UIDevice.deviceName.rawValue
-            if let backgroundImage = backgroundImageDictionary[deviceName] as? String {
+            
+            if let backgroundImage = dictionary[deviceName] as? String {
                 let backgroundImageURL = URL(string: backgroundImage)
                 self.backgroundImageURL = backgroundImageURL
             }
+            
         }
         
     }
     
     func downloadBackgroundImage(_ completion: @escaping () -> Void) {
+        
+        let deviceName = UIDevice.deviceName.rawValue
+
         NetworkService.shared.downloadBackgroundImage(for: self) { (image) in
             self.backgroundImage = image
             DispatchQueue.main.async {
                 completion()
             }
         }
+        
+        print("Finished downloading background image for device \(deviceName)")
+        
     }
     
 }

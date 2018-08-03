@@ -18,68 +18,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-44-XqV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppleSpecialEvent-iPhone8" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-44-XqV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
-                                <rect key="frame" x="34" y="104" width="307" height="45.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Special Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="2Tb-4Z-Ity">
+                                <rect key="frame" x="34" y="58" width="307" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="88"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-vh-TfF">
-                                <rect key="frame" x="47.5" y="189.5" width="280" height="72"/>
+                                <rect key="frame" x="47.5" y="129" width="280" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="VCY-QY-klT"/>
+                                    <constraint firstAttribute="width" constant="280" id="f2v-Wf-74d"/>
                                 </constraints>
-                                <string key="text">Apple Worldwide Developers Conference
-San Jose, CA</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
-                                <rect key="frame" x="181" y="347" width="13.5" height="55"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
-                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-w6-4h1">
-                                <rect key="frame" x="122.5" y="625" width="130" height="24"/>
+                                <string key="text">Live at Steve Jobs Theater.
+September 12 at 10 a.m. PDT.</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="f2v-Wf-74d"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="f2v-Wf-74d"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE AND TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-kW-GLb">
-                                <rect key="frame" x="126" y="279.5" width="123" height="19.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPTEMBER 12, 2018 AT 10:30 PM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwQ-kW-GLb">
+                                <rect key="frame" x="68.5" y="195" width="238" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-Dx-nye">
+                                <rect key="frame" x="178.5" y="256" width="18" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="88"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t93-w6-4h1">
+                                <rect key="frame" x="131" y="627.5" width="113.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0EG-ZU-Mfu"/>
-                            <constraint firstItem="kr3-vh-TfF" firstAttribute="top" secondItem="2Tb-4Z-Ity" secondAttribute="bottom" constant="40" id="2GV-OE-hrr"/>
+                            <constraint firstItem="kr3-vh-TfF" firstAttribute="top" secondItem="2Tb-4Z-Ity" secondAttribute="bottom" constant="28" id="2GV-OE-hrr"/>
                             <constraint firstItem="kr3-vh-TfF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jm-P9-gM2"/>
                             <constraint firstItem="xZi-44-XqV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4i8-4b-TKk"/>
-                            <constraint firstItem="qwQ-kW-GLb" firstAttribute="top" secondItem="kr3-vh-TfF" secondAttribute="bottom" constant="18" id="FFr-gE-quV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Tb-4Z-Ity" secondAttribute="trailing" constant="34" id="HOg-d6-EOH"/>
-                            <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="qwQ-kW-GLb" secondAttribute="bottom" constant="48" id="IF0-cK-dLG"/>
-                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="O8n-tB-a8g"/>
+                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7WI-RZ-S8q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kr3-vh-TfF" secondAttribute="trailing" constant="190" id="8Il-xc-Oxi"/>
+                            <constraint firstItem="qwQ-kW-GLb" firstAttribute="top" secondItem="kr3-vh-TfF" secondAttribute="bottom" constant="18" id="FFr-gE-quV">
+                                <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                            </constraint>
+                            <constraint firstItem="kr3-vh-TfF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="190" id="FNc-xG-4op"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Tb-4Z-Ity" secondAttribute="trailing" constant="34" id="HOg-d6-EOH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="eFP-Dx-nye" firstAttribute="top" secondItem="qwQ-kW-GLb" secondAttribute="bottom" constant="44" id="IF0-cK-dLG">
+                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="O8n-tB-a8g">
+                                <variation key="heightClass=regular-widthClass=regular" constant="190"/>
+                            </constraint>
                             <constraint firstItem="t93-w6-4h1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohn-9L-hkd"/>
-                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="POB-fi-BYH"/>
+                            <constraint firstItem="2Tb-4Z-Ity" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="POB-fi-BYH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
                             <constraint firstItem="xZi-44-XqV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXe-mJ-n3m"/>
                             <constraint firstItem="qwQ-kW-GLb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXV-58-R1C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t93-w6-4h1" secondAttribute="bottom" constant="18" id="lZj-yW-SIF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t93-w6-4h1" secondAttribute="bottom" constant="18" id="lZj-yW-SIF">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="xZi-44-XqV" secondAttribute="trailing" id="nbT-Ka-y5F"/>
                             <constraint firstAttribute="bottom" secondItem="xZi-44-XqV" secondAttribute="bottom" id="ni5-Yl-YuW"/>
                             <constraint firstItem="eFP-Dx-nye" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ois-IR-uiM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eFP-Dx-nye" secondAttribute="trailing" constant="40" id="rig-WF-WJc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="8Il-xc-Oxi"/>
+                                <exclude reference="FNc-xG-4op"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fb3-pf-N8g" appends="YES" id="o5g-NG-k6a"/>
                         </connections>
@@ -99,7 +145,10 @@ San Jose, CA</string>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="140" y="133.74384236453201"/>
+            <point key="canvasLocation" x="139.453125" y="133.52855051244509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppleSpecialEvent-iPhone8" width="375" height="667"/>
+    </resources>
 </document>
