@@ -17,6 +17,10 @@ class NetworkService {
     
     static var shared = NetworkService()
     
+    func getLocalEventInfo(_ completion: @escaping (ASE) -> Void) {
+        
+    }
+    
     func downloadEventInfo(_ completion: @escaping (ASE) -> Void) {
         
         guard let databaseURL = databaseURL else {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD131F5BC4960070A19D /* AppDelegate.swift */; };
-		2049DD161F5BC4960070A19D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD151F5BC4960070A19D /* MainViewController.swift */; };
 		2049DD191F5BC4960070A19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD171F5BC4960070A19D /* Main.storyboard */; };
 		2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */; };
 		2049DD2C1F5BC8810070A19D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049DD2B1F5BC8810070A19D /* NotificationCenter.framework */; };
@@ -20,6 +19,7 @@
 		207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
 		208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
 		208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
+		209524122115537200A8EA1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209524112115537200A8EA1F /* MainViewController.swift */; };
 		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 		20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
 		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
@@ -52,7 +52,6 @@
 /* Begin PBXFileReference section */
 		2049DD101F5BC4960070A19D /* ASE Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASE Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049DD131F5BC4960070A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2049DD151F5BC4960070A19D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2049DD181F5BC4960070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2049DD1A1F5BC4960070A19D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2049DD1D1F5BC4960070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207285FA2105D1920022B2A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		208FC41121118B41000228E0 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
+		209524112115537200A8EA1F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2049DD131F5BC4960070A19D /* AppDelegate.swift */,
-				2049DD151F5BC4960070A19D /* MainViewController.swift */,
+				209524112115537200A8EA1F /* MainViewController.swift */,
 				207285FA2105D1920022B2A9 /* NetworkService.swift */,
 				208FC41121118B41000228E0 /* UIDevice-Extension.swift */,
 				20AD014A20EDD93300CA1386 /* ASE.swift */,
@@ -250,10 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
-				2049DD161F5BC4960070A19D /* MainViewController.swift in Sources */,
 				207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */,
 				208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */,
 				2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */,
+				209524122115537200A8EA1F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +455,7 @@
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rahulrs0029.asetimer.ASE-Timer-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.asetimerwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -469,7 +469,7 @@
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rahulrs0029.asetimer.ASE-Timer-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.asetimerwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;

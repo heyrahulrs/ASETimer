@@ -40,6 +40,9 @@ class MainViewController: UIViewController {
             self.setBackgroundImage()
         }
         
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress))
+        view.addGestureRecognizer(longPressGestureRecognizer)
+        
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -148,7 +151,9 @@ class MainViewController: UIViewController {
     
     //MARK: - ACTIONS
     
-    @IBAction func didLongPress(_ sender: UILongPressGestureRecognizer) {
+    //MARK: - SELECTORS
+    
+    @objc func didLongPress() {
         
         var image: UIImage?
         
