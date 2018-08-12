@@ -42,7 +42,7 @@ September 12 at 10 a.m. PDT.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPTEMBER 12, 2018 AT 10:30 PM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-Eo-G1k">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPTEMBER 12, 2018 AT 10:30 PM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-Eo-G1k">
                                 <rect key="frame" x="68.5" y="423" width="238" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,8 +61,8 @@ September 12 at 10 a.m. PDT.</string>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="78"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-D5-RFj">
-                                <rect key="frame" x="131" y="633.5" width="113.5" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@rahulrs0029" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-D5-RFj">
+                                <rect key="frame" x="131" y="627.5" width="113.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,17 +70,38 @@ September 12 at 10 a.m. PDT.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-ck-1Hi" userLabel="Info Button">
+                                <rect key="frame" x="329" y="623.5" width="30" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Info Icon"/>
+                                <connections>
+                                    <action selector="didTapInfoButton" destination="05A-FY-dva" eventType="touchUpInside" id="LeC-Ub-Z2J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-fF-i47" userLabel="Share Button">
+                                <rect key="frame" x="16" y="623.5" width="25" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Share Icon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapShareButton" destination="05A-FY-dva" eventType="touchUpInside" id="4tC-wv-Kj7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="B35-nj-2lM" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="ID1-xS-NYW"/>
+                            <constraint firstItem="dH4-C1-n9I" firstAttribute="trailing" secondItem="Obr-ck-1Hi" secondAttribute="trailing" constant="16" id="JBz-TC-P36"/>
                             <constraint firstItem="MtE-5l-idH" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="JXu-rU-EAl"/>
                             <constraint firstItem="4Dn-Eo-G1k" firstAttribute="top" secondItem="MtE-5l-idH" secondAttribute="bottom" constant="14" id="Kcs-gL-dQo">
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                             </constraint>
-                            <constraint firstItem="dH4-C1-n9I" firstAttribute="bottom" secondItem="xZd-D5-RFj" secondAttribute="bottom" constant="12" id="SXe-ir-aIm"/>
+                            <constraint firstItem="dH4-C1-n9I" firstAttribute="bottom" secondItem="xZd-D5-RFj" secondAttribute="bottom" constant="18" id="SXe-ir-aIm"/>
                             <constraint firstItem="4Dn-Eo-G1k" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="Xen-HH-Vtg"/>
+                            <constraint firstItem="SQk-fF-i47" firstAttribute="centerY" secondItem="xZd-D5-RFj" secondAttribute="centerY" id="YDD-Xw-2Xv"/>
+                            <constraint firstItem="SQk-fF-i47" firstAttribute="leading" secondItem="dH4-C1-n9I" secondAttribute="leading" constant="16" id="ZjR-5E-Voe"/>
                             <constraint firstItem="OX7-je-UJz" firstAttribute="top" secondItem="d89-JP-Y2T" secondAttribute="top" id="caq-tk-sPg"/>
                             <constraint firstItem="xZd-D5-RFj" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="d6u-IK-2Vc"/>
                             <constraint firstItem="MtE-5l-idH" firstAttribute="top" secondItem="B35-nj-2lM" secondAttribute="bottom" constant="16" id="gMk-yz-pCl">
@@ -93,6 +114,7 @@ September 12 at 10 a.m. PDT.</string>
                                 <variation key="heightClass=regular-widthClass=regular" constant="440"/>
                             </constraint>
                             <constraint firstItem="rDy-BE-aAK" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="q6x-WE-C75"/>
+                            <constraint firstItem="Obr-ck-1Hi" firstAttribute="centerY" secondItem="xZd-D5-RFj" secondAttribute="centerY" id="sFO-tZ-bdv"/>
                             <constraint firstItem="OX7-je-UJz" firstAttribute="leading" secondItem="dH4-C1-n9I" secondAttribute="leading" id="tZK-O3-40h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dH4-C1-n9I"/>
@@ -103,11 +125,17 @@ September 12 at 10 a.m. PDT.</string>
                         <outlet property="eventDateAndTimeLabel" destination="4Dn-Eo-G1k" id="0An-oW-dKy"/>
                         <outlet property="eventDescriptionLabel" destination="MtE-5l-idH" id="dGS-JS-Ws3"/>
                         <outlet property="eventHeadingLabel" destination="B35-nj-2lM" id="KWq-bR-S15"/>
+                        <outlet property="infoButton" destination="Obr-ck-1Hi" id="zxb-GN-L6h"/>
+                        <outlet property="shareButton" destination="SQk-fF-i47" id="rc8-8s-sA0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugh-sr-vXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="134"/>
+            <point key="canvasLocation" x="432.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Info Icon" width="30" height="30"/>
+        <image name="Share Icon" width="25" height="30"/>
+    </resources>
 </document>

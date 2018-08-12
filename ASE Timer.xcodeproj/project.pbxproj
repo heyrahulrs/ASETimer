@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2009147421206EE300DFA5ED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD0221204284003A8AF7 /* Reachability.swift */; };
+		2009147521206EE500DFA5ED /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9EF421205AE9002055D6 /* Strings.swift */; };
 		2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD131F5BC4960070A19D /* AppDelegate.swift */; };
 		2049DD191F5BC4960070A19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD171F5BC4960070A19D /* Main.storyboard */; };
 		2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */; };
@@ -16,13 +18,17 @@
 		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
+		20603DA1211FF314007F38B0 /* URL-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20603DA0211FF314007F38B0 /* URL-Extension.swift */; };
 		207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
+		207D9EF521205AE9002055D6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9EF421205AE9002055D6 /* Strings.swift */; };
 		208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
 		208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
 		209524122115537200A8EA1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209524112115537200A8EA1F /* MainViewController.swift */; };
 		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 		20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
 		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
+		20F5DD0321204284003A8AF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD0221204284003A8AF7 /* Reachability.swift */; };
+		20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +67,14 @@
 		2049DD2E1F5BC8810070A19D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2049DD311F5BC8810070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20603DA0211FF314007F38B0 /* URL-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL-Extension.swift"; sourceTree = "<group>"; };
 		207285FA2105D1920022B2A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		207D9EF421205AE9002055D6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		208FC41121118B41000228E0 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
 		209524112115537200A8EA1F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
+		20F5DD0221204284003A8AF7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2009147121206EB600DFA5ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				209524112115537200A8EA1F /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2009147221206EC500DFA5ED /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				207285FA2105D1920022B2A9 /* NetworkService.swift */,
+				20F5DD0221204284003A8AF7 /* Reachability.swift */,
+				207D9EF421205AE9002055D6 /* Strings.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		2009147321206EDC00DFA5ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20603DA0211FF314007F38B0 /* URL-Extension.swift */,
+				208FC41121118B41000228E0 /* UIDevice-Extension.swift */,
+				20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2009147621206EEE00DFA5ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20AD014A20EDD93300CA1386 /* ASE.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2049DD071F5BC4960070A19D = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				2049DD131F5BC4960070A19D /* AppDelegate.swift */,
-				209524112115537200A8EA1F /* MainViewController.swift */,
-				207285FA2105D1920022B2A9 /* NetworkService.swift */,
-				208FC41121118B41000228E0 /* UIDevice-Extension.swift */,
-				20AD014A20EDD93300CA1386 /* ASE.swift */,
+				2009147621206EEE00DFA5ED /* Model */,
+				2009147121206EB600DFA5ED /* Controller */,
+				2009147221206EC500DFA5ED /* Helper Files */,
+				2009147321206EDC00DFA5ED /* Extensions */,
 				2049DD171F5BC4960070A19D /* Main.storyboard */,
 				2049DD1A1F5BC4960070A19D /* Assets.xcassets */,
 				2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */,
@@ -150,6 +196,7 @@
 				2049DD0D1F5BC4960070A19D /* Frameworks */,
 				2049DD0E1F5BC4960070A19D /* Resources */,
 				2049DD3A1F5BC8810070A19D /* Embed App Extensions */,
+				2009147721206FBD00DFA5ED /* Increment Build */,
 			);
 			buildRules = (
 			);
@@ -244,16 +291,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2009147721206FBD00DFA5ED /* Increment Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2049DD0C1F5BC4960070A19D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F5DD0321204284003A8AF7 /* Reachability.swift in Sources */,
+				207D9EF521205AE9002055D6 /* Strings.swift in Sources */,
 				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
 				207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */,
 				208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */,
+				20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */,
 				2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */,
 				209524122115537200A8EA1F /* MainViewController.swift in Sources */,
+				20603DA1211FF314007F38B0 /* URL-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +336,8 @@
 				20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */,
 				20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */,
 				2049DD2F1F5BC8810070A19D /* TodayViewController.swift in Sources */,
+				2009147421206EE300DFA5ED /* Reachability.swift in Sources */,
+				2009147521206EE500DFA5ED /* Strings.swift in Sources */,
 				208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,9 +42,18 @@ class ASE {
             
         }
         
+        if let backgroundImageData = json["backgroundImageData"] as? Data {
+            let image = UIImage(data: backgroundImageData)
+            self.backgroundImage = image
+        }
+        
     }
     
     func downloadBackgroundImage(_ completion: @escaping () -> Void) {
+        
+        if let _ = backgroundImage {
+            completion()
+        }
         
         let deviceName = UIDevice.deviceName.rawValue
 
@@ -56,6 +65,29 @@ class ASE {
         }
         
         print("Finished downloading background image for device \(deviceName)")
+        
+    }
+    
+    func eventInfo() -> [String: Any] {
+        
+        var data: [String: Any] = [:]
+        
+        if let backgroundImage = backgroundImage {
+            
+            if let imageData = backgroundImage.jpegData(compressionQuality: 1.0) {
+                data["backgroundImageData"] = imageData
+            }
+            
+        }
+        
+        if let eventUnixTime = unixTime {
+            data["eventUnixTime"] = eventUnixTime
+        }
+        
+        data["title"] = title
+        data["description"] = description
+        
+        return data
         
     }
     
