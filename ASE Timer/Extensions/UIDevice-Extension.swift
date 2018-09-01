@@ -33,7 +33,7 @@ extension UIDevice {
             return .iPhone8Plus
         case 2436:
             return .iPhoneX
-        case 2224, 2732:
+        case 2048, 2224, 2732:
             return .iPad
         default:
             return .unknown

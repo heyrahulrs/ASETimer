@@ -13,35 +13,39 @@ typealias time = (days: Int, hours: Int, minutes: Int, seconds: Int)
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    @IBOutlet weak var eventHeadingLabel: UILabel!
     @IBOutlet weak var countdownTimerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkService.shared.downloadEventInfo { (event) in
+        NetworkService.shared.downloadEventInfo { event in
             
-            if let eventUnixTime = event.unixTime {
-                self.updateUI(for: eventUnixTime)
+            if let _ = event.unixTime {
+                self.updateUI(for: event)
             }else{
-                self.updateCountdownLabel(with: "Date not known yet")
+                self.updateCountdownLabel(withFallbackText: DATE_UNKOWN)
             }
             
         }
         
     }
     
-    fileprivate func updateUI(for eventUnixTime: TimeInterval) {
+    fileprivate func updateUI(for event: ASE) {
         
-        let eventUnixTime: TimeInterval = eventUnixTime
+        eventHeadingLabel.text = event.title
+        
+        guard let eventUnixTime: TimeInterval = event.unixTime else { return }
+        
         let currentUnixTime = Date().timeIntervalSince1970
         
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
         if secondsUntilEvent <= -7200 {
-            updateCountdownLabel(with: "Event has been concluded.")
+            updateCountdownLabel(withFallbackText: EVENT_CONCLUDED)
             return
         }else if secondsUntilEvent <= 0 {
-            updateCountdownLabel(with: "Keynote is now streaming live.")
+            updateCountdownLabel(withFallbackText: KEYNOTE_IS_LIVE)
             return
         }
         
@@ -68,10 +72,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     }
     
-    fileprivate func updateCountdownLabel(with text: String) {
+    fileprivate func updateCountdownLabel(withFallbackText text: String) {
+        
+        eventHeadingLabel.isHidden = true
+        
         countdownTimerLabel.text = text.uppercased()
         countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
-        countdownTimerLabel.alpha = 0.8
+        countdownTimerLabel.alpha = 0.7
+        
     }
     
     fileprivate func getDaysHoursMinutesSeconds(from secondsUntilEvent: Double) -> time {

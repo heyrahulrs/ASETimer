@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     
     //MARK: - OUTLETS
     
+    @IBOutlet weak var eventHeadingLabelTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var eventHeadingLabel: UILabel!
     @IBOutlet weak var eventDescriptionLabel: UILabel!
     @IBOutlet weak var eventDateAndTimeLabel: UILabel!
@@ -36,13 +38,30 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress))
+        let action = #selector(didLongPress)
+        let longPressGestureRecognizer = UILongPressGestureRecognizer()
+        longPressGestureRecognizer.addTarget(self, action: action)
         view.addGestureRecognizer(longPressGestureRecognizer)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if UIDevice.deviceName == .iPhone4S {
+            resetUI()
+            showAlert(title: "Error", message: "This app doesn't support iPhone 4S.")
+            return
+        }
+        
+        if UIDevice.deviceName == .iPhoneSE {
+            eventHeadingLabelTopConstraint.constant = 20
+        }
+        
+        if event != nil {
+            print("Info: Event data is already loaded.")
+            return
+        }
         
         resetUI()
         
@@ -100,6 +119,10 @@ class MainViewController: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - FILEPRIVATE FUNCTIONS
     
     fileprivate func resetUI() {
@@ -115,12 +138,15 @@ class MainViewController: UIViewController {
         let eventTitle = event.title.replacingOccurrences(of:" ", with: "")
         let imageName = "\(eventTitle)-\(UIDevice.deviceName.rawValue)"
         
-        print(imageName)
+        print("Info: Finding Background Image named: \(imageName)")
         
         if let backgroundImage = UIImage(named: imageName) {
+            print("Info: Background Image named: \(imageName) found in app bundle.")
             backgroundImageView.image = backgroundImage
             return
         }
+        
+        print("Info: Background Image named: \(imageName) not found in app bundle.")
         
         event.downloadBackgroundImage {
             
@@ -154,6 +180,9 @@ class MainViewController: UIViewController {
         eventDescriptionLabel.text = event.description
         
         guard let eventUnixTime = event.unixTime else {
+            print("Info: Date of event not found.")
+            shareButton.isHidden = true
+            infoButton.isHidden = true
             timer.invalidate()
             return
         }
@@ -171,11 +200,13 @@ class MainViewController: UIViewController {
         let secondsUntilEvent: Double = eventUnixTime - currentUnixTime
         
         if secondsUntilEvent <= -7200 { //Event already concluded
+            print("Info: Event already concluded. Resetting UI.")
             resetUI()
             eventHeadingLabel.text = eventNamePrediction
             timer.invalidate()
             return
         }else if secondsUntilEvent <= 0 { //Keynote is now streaming live.
+            print("Info: Keynote is now streaming live.")
             self.countdownTimerLabel.text = KEYNOTE_IS_LIVE
             timer.invalidate()
             return
@@ -203,9 +234,9 @@ class MainViewController: UIViewController {
         
     }
     
-    //MARK: - ACTIONS
-    
-    @IBAction func didTapShareButton() {
+    fileprivate func presentActivityViewController() {
+        
+        guard let _ = event.unixTime else { return }
         
         shareButton.isHidden = true
         infoButton.isHidden = true
@@ -244,16 +275,22 @@ class MainViewController: UIViewController {
             return
         }
         
-        let caption = "\(text) until \(event.title)"
+        let caption = "\(text) until \(event.title)."
         
         let viewController = UIActivityViewController(activityItems: [screenshot, caption], applicationActivities: nil)
         present(viewController, animated: true)
         
     }
     
+    //MARK: - ACTIONS
+    
+    @IBAction func didTapShareButton() {
+        presentActivityViewController()
+    }
+    
     @IBAction func didTapInfoButton() {
         
-        let url = URL(staticString: "https://apple.co/live")
+        let url = URL(staticString: "https://www.apple.com/apple-events/september-2018/")
         
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
@@ -265,60 +302,22 @@ class MainViewController: UIViewController {
     //MARK: - SELECTORS
     
     @objc func didLongPress() {
-        
-        shareButton.isHidden = true
-        infoButton.isHidden = true
-        
-        let (days, hours, minutes, _) = time
-        
-        var text = ""
-        
-        if days != 0 {
-            
-            if days % 7 == 0 {
-                let weeks = days / 7
-                text = weeks == 1 ? "\(weeks) week" : "\(weeks) weeks"
-            }else{
-                text = days == 1 ? "\(days) day" : "\(days) days"
-            }
-            
-        }else if hours != 0 {
-            
-            text = hours == 1 ? "\(hours) hour" : "\(hours) hours"
-            
-        }else if minutes % 5 == 0 {
-            
-            text = "\(minutes) minutes"
-            
-        }
-        
-        countdownTimerLabel.text = text
-        
-        let screenshot = takeScreenshot(of: view)
-        
-        shareButton.isHidden = false
-        infoButton.isHidden = false
-        
-        if text == "" {
-            return
-        }
-        
-        let caption = "\(text) until \(event.title)"
-        
-        let viewController = UIActivityViewController(activityItems: [screenshot, caption], applicationActivities: nil)
-        present(viewController, animated: true)
-        
+        presentActivityViewController()
     }
     
     //MARK: - FUNCTIONS
     
-    func getObject(forKey key: String) -> Any {
+    func getObject(forKey key: String) -> Any? {
         
         print("Info: Getting Data for key: \(key) from the device.")
 
         let defaults = UserDefaults.standard
-        let object = defaults.object(forKey: key) ?? nil
-        return object
+        
+        if let object = defaults.object(forKey: key) {
+            return object
+        }
+        
+        return nil
         
     }
     

@@ -64,7 +64,7 @@ class ASE {
             }
         }
         
-        print("Finished downloading background image for device \(deviceName)")
+        print("Info: Finished downloading background image for device \(deviceName)")
         
     }
     
@@ -72,11 +72,10 @@ class ASE {
         
         var data: [String: Any] = [:]
         
-        if let backgroundImage = backgroundImage {
+        if let backgroundImage = backgroundImage,
+            let imageData = backgroundImage.jpegData(compressionQuality: 1.0) {
             
-            if let imageData = backgroundImage.jpegData(compressionQuality: 1.0) {
-                data["backgroundImageData"] = imageData
-            }
+            data["backgroundImageData"] = imageData
             
         }
         

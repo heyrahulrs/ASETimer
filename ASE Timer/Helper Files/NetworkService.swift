@@ -24,7 +24,7 @@ class NetworkService {
     func downloadEventInfo(_ completion: @escaping (ASE) -> Void) {
         
         guard let databaseURL = databaseURL else {
-            print("Error: cannot create URL")
+            print("Error: Database URL invalid.")
             return
         }
         
@@ -36,14 +36,14 @@ class NetworkService {
             }
             
             guard let data = data else {
-                print("Error: did not receive data")
+                print("Error: Server didn't returned any data.")
                 return
             }
             
             do {
                 
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-                    print("Error: Data not convertable to JSON")
+                    print("Error: Data not convertable to JSON.")
                     return
                 }
                 
@@ -54,7 +54,7 @@ class NetworkService {
                 }
                 
             } catch{
-                print("Error: error trying to convert data to JSON")
+                print("Error: Error trying to convert data to JSON.")
                 return
             }
             
