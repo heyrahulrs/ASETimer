@@ -38,6 +38,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if UIDevice.deviceName == .iPhone4S {
+            resetUI()
+            showAlert(title: "Error", message: "This app doesn't support iPhone 4S.")
+            return
+        }
+        
         let action = #selector(didLongPress)
         let longPressGestureRecognizer = UILongPressGestureRecognizer()
         longPressGestureRecognizer.addTarget(self, action: action)
@@ -357,7 +363,7 @@ class MainViewController: UIViewController {
         let month = Int(dateFormatter.string(from: date))!
         
         switch month {
-        case 9...12, 1...3:
+        case 11, 12, 1...3:
             return "Apple March Event"
             
         case 4...5:
@@ -368,6 +374,9 @@ class MainViewController: UIViewController {
             
         case 6...8:
             return "Apple September Event"
+            
+        case 9...10:
+            return "Apple October Event"
             
         default:
             return "Next Apple Event"
