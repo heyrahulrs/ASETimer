@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2009147421206EE300DFA5ED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD0221204284003A8AF7 /* Reachability.swift */; };
 		2009147521206EE500DFA5ED /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9EF421205AE9002055D6 /* Strings.swift */; };
+		2033E0D12179EE8B009DDEED /* HeroLogo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */; };
+		2033E0D22179EE8F009DDEED /* HeroLogo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */; };
 		2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD131F5BC4960070A19D /* AppDelegate.swift */; };
 		2049DD191F5BC4960070A19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD171F5BC4960070A19D /* Main.storyboard */; };
 		2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */; };
@@ -56,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HeroLogo.xcassets; sourceTree = "<group>"; };
 		2049DD101F5BC4960070A19D /* ASE Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASE Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049DD131F5BC4960070A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2049DD181F5BC4960070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 				2009147321206EDC00DFA5ED /* Extensions */,
 				2049DD171F5BC4960070A19D /* Main.storyboard */,
 				2049DD1A1F5BC4960070A19D /* Assets.xcassets */,
+				2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */,
 				2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */,
 				2049DD1F1F5BC4960070A19D /* Info.plist */,
 			);
@@ -274,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2033E0D12179EE8B009DDEED /* HeroLogo.xcassets in Resources */,
 				2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */,
 				2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */,
 				2049DD191F5BC4960070A19D /* Main.storyboard in Resources */,
@@ -284,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2033E0D22179EE8F009DDEED /* HeroLogo.xcassets in Resources */,
 				2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */,
 				2049DD321F5BC8810070A19D /* MainInterface.storyboard in Resources */,
 			);

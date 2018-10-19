@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension UIDevice {
     
@@ -16,6 +17,7 @@ extension UIDevice {
         case iPhone8 = "iPhone8"
         case iPhone8Plus = "iPhone8Plus"
         case iPhoneX = "iPhoneX"
+        case iPhoneXSMax = "iPhoneXSMax"
         case iPad = "iPad"
         case unknown = "UnknownDevice"
     }
@@ -33,12 +35,18 @@ extension UIDevice {
             return .iPhone8Plus
         case 2436:
             return .iPhoneX
+        case 2688:
+            return .iPhoneXSMax
         case 2048, 2224, 2732:
             return .iPad
         default:
             return .unknown
         }
         
+    }
+    
+    static func vibrate() {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
 }

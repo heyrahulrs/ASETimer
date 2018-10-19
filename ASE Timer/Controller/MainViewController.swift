@@ -22,16 +22,22 @@ class MainViewController: UIViewController {
     @IBOutlet weak var eventDateAndTimeLabel: UILabel!
     @IBOutlet weak var countdownTimerLabel: UILabel!
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var logoImageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var logoImageViewTopConstraint: NSLayoutConstraint!
+
     //MARK: - VARIABLES
     
     var event: ASE!
     var timer: Timer!
     var time: time = (0, 0, 0, 0)
+    
+    var randomNumber = 0
     
     //MARK: - UI KIT METHODS
     
@@ -61,7 +67,17 @@ class MainViewController: UIViewController {
         }
         
         if UIDevice.deviceName == .iPhoneSE {
-            eventHeadingLabelTopConstraint.constant = 20
+            eventHeadingLabelTopConstraint.constant = 200
+            logoImageViewHeightConstraint.constant = 150
+        }
+        
+        if UIDevice.deviceName == .iPhoneX {
+            logoImageViewTopConstraint.constant = 74
+        }
+        
+        if UIDevice.deviceName == .iPad {
+            logoImageViewTopConstraint.constant = 90
+            logoImageViewHeightConstraint.constant = 302
         }
         
         if event != nil {
@@ -71,6 +87,9 @@ class MainViewController: UIViewController {
         
         resetUI()
         
+        setRandomAppleLogo()
+        
+        // NOT CONNECTED TO NETWORK... LOAD LOCAL DATA.
         guard Reachability.isConnectedToNetwork() else {
             
             print("Error: Device is not connected to network.")
@@ -90,6 +109,8 @@ class MainViewController: UIViewController {
             return
         }
         
+        
+        // LOAD EVENT INFO FROM SERVER
         NetworkService.shared.downloadEventInfo { (event) in
             
             self.remove(forKey: USER_DEFAULTS_KEY)
@@ -107,6 +128,10 @@ class MainViewController: UIViewController {
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         print("Info: Refreshing details")
+        
+        UIDevice.vibrate()
+        
+        setRandomAppleLogo()
         
         resetUI()
         
@@ -126,7 +151,7 @@ class MainViewController: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
     
     //MARK: - FILEPRIVATE FUNCTIONS
@@ -139,7 +164,23 @@ class MainViewController: UIViewController {
         backgroundImageView.image = nil
     }
     
+    fileprivate func setRandomAppleLogo() {
+        var newRandomNumber = Int.random(in: 1...10)
+        while newRandomNumber == randomNumber {
+            newRandomNumber = Int.random(in: 1...10)
+        }
+        randomNumber = newRandomNumber
+        let imageName = "hero_logo_\(randomNumber)"
+        logoImageView.image = UIImage(named: imageName)
+    }
+    
+    
     fileprivate func setBackgroundImage() {
+        
+        if logoImageView.image != nil {
+            print("Info: Logo Image already set. Returning.")
+            return
+        }
         
         let eventTitle = event.title.replacingOccurrences(of:" ", with: "")
         let imageName = "\(eventTitle)-\(UIDevice.deviceName.rawValue)"
@@ -153,22 +194,6 @@ class MainViewController: UIViewController {
         }
         
         print("Info: Background Image named: \(imageName) not found in app bundle.")
-        
-        event.downloadBackgroundImage {
-            
-            if Reachability.isConnectedToNetwork() {
-                
-                //RE-SAVE DATA TO DEVICE AFTER DOWNLOADING BACKGROUND IMAGE
-                self.remove(forKey: USER_DEFAULTS_KEY)
-                
-                let data = self.event.eventInfo()
-                self.save(value: data, forKey: USER_DEFAULTS_KEY)
-                
-            }
-            
-            self.backgroundImageView.image = self.event.backgroundImage
-            
-        }
         
     }
     
@@ -296,7 +321,7 @@ class MainViewController: UIViewController {
     
     @IBAction func didTapInfoButton() {
         
-        let url = URL(staticString: "https://www.apple.com/apple-events/september-2018/")
+        let url = URL(staticString: "https://www.apple.com/apple-events/")
         
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self

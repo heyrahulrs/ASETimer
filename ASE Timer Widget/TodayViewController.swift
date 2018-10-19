@@ -15,9 +15,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet weak var eventHeadingLabel: UILabel!
     @IBOutlet weak var countdownTimerLabel: UILabel!
+    @IBOutlet weak var eventLogoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let randomNumber = Int.random(in: 1...10)
+        let imageName = "hero_logo_\(randomNumber)"
+        eventLogoImageView.image = UIImage(named: imageName)
         
         NetworkService.shared.downloadEventInfo { event in
             

@@ -61,27 +61,8 @@ class NetworkService {
         }
         
         task.resume()
+        
     }
     
-    func downloadBackgroundImage(for event: ASE, _ completion: @escaping (UIImage) -> Void) {
-        
-        guard let backgroundImageURL = event.backgroundImageURL else { return }
-        
-        URLSession.shared.dataTask(with: backgroundImageURL) { (data, response, error) in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            if let image = UIImage(data: data) {
-                completion(image)
-            }
-            
-        }.resume()
-        
-    }
     
 }
