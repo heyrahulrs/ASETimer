@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05A-FY-dva">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="05A-FY-dva" customClass="MainViewController" customModule="ASE_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d89-JP-Y2T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x0y-0a-fTa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Special Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="B35-nj-2lM">
-                                <rect key="frame" x="35.5" y="304" width="304.5" height="41"/>
+                                <rect key="frame" x="317.5" y="400" width="477.5" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <color key="textColor" red="0.18431372549019609" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="MtE-5l-idH">
-                                <rect key="frame" x="60" y="361" width="255.5" height="48"/>
+                                <rect key="frame" x="367" y="498.5" width="378.5" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Jxf-nh-gEw"/>
                                 </constraints>
@@ -55,7 +55,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPTEMBER 12, 2018 AT 10:30 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-Eo-G1k">
-                                <rect key="frame" x="68.5" y="423" width="238" height="17"/>
+                                <rect key="frame" x="393" y="602.5" width="326.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.18431372549019609" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="rDy-BE-aAK">
-                                <rect key="frame" x="178.5" y="512" width="18" height="45.5"/>
+                                <rect key="frame" x="539" y="698.5" width="34.5" height="93.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" red="0.18431372549019609" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@asetimer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-D5-RFj">
-                                <rect key="frame" x="145" y="627.5" width="85.5" height="21.5"/>
+                                <rect key="frame" x="500.5" y="787" width="111" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" red="0.1843137255" green="0.1647058824" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obr-ck-1Hi" userLabel="Info Button">
-                                <rect key="frame" x="329" y="623.5" width="30" height="30"/>
+                                <rect key="frame" x="1066" y="786.5" width="30" height="30"/>
                                 <color key="tintColor" red="0.18431372549019609" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="Info Icon"/>
                                 <connections>
@@ -91,7 +91,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-fF-i47" userLabel="Share Button">
-                                <rect key="frame" x="16" y="623.5" width="25" height="30"/>
+                                <rect key="frame" x="16" y="786.5" width="25" height="30"/>
                                 <color key="tintColor" red="0.18431372549019609" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="Share Icon">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -101,7 +101,7 @@ September 12 at 10 a.m. PDT.</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rl2-LV-q9Z">
-                                <rect key="frame" x="77.5" y="54" width="220" height="220"/>
+                                <rect key="frame" x="446" y="54" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="NpX-nu-t1S"/>
                                     <constraint firstAttribute="width" secondItem="Rl2-LV-q9Z" secondAttribute="height" multiplier="1:1" id="wcr-Py-6f5"/>
@@ -115,6 +115,7 @@ September 12 at 10 a.m. PDT.</string>
                             <constraint firstItem="4Dn-Eo-G1k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dH4-C1-n9I" secondAttribute="leading" constant="30" id="2nt-Ik-tK4"/>
                             <constraint firstItem="MtE-5l-idH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dH4-C1-n9I" secondAttribute="leading" constant="20" id="BZl-3K-Mxh"/>
                             <constraint firstItem="x0y-0a-fTa" firstAttribute="top" secondItem="d89-JP-Y2T" secondAttribute="top" id="Cga-3j-KId"/>
+                            <constraint firstItem="B35-nj-2lM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Rl2-LV-q9Z" secondAttribute="bottom" constant="30" id="FQl-4o-7DS"/>
                             <constraint firstItem="dH4-C1-n9I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B35-nj-2lM" secondAttribute="trailing" constant="30" id="HFk-qq-WB2"/>
                             <constraint firstItem="B35-nj-2lM" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="ID1-xS-NYW"/>
                             <constraint firstItem="dH4-C1-n9I" firstAttribute="trailing" secondItem="Obr-ck-1Hi" secondAttribute="trailing" constant="16" id="JBz-TC-P36"/>
@@ -136,8 +137,8 @@ September 12 at 10 a.m. PDT.</string>
                             <constraint firstItem="rDy-BE-aAK" firstAttribute="top" secondItem="4Dn-Eo-G1k" secondAttribute="bottom" constant="72" id="gT9-AJ-iP5"/>
                             <constraint firstItem="dH4-C1-n9I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Dn-Eo-G1k" secondAttribute="trailing" constant="30" id="gbF-hN-FUy"/>
                             <constraint firstItem="Rl2-LV-q9Z" firstAttribute="top" secondItem="dH4-C1-n9I" secondAttribute="top" constant="34" id="jfh-It-DAe"/>
-                            <constraint firstItem="B35-nj-2lM" firstAttribute="top" secondItem="dH4-C1-n9I" secondAttribute="top" constant="284" id="lGX-h5-KW3">
-                                <variation key="heightClass=regular-widthClass=regular" constant="440"/>
+                            <constraint firstItem="B35-nj-2lM" firstAttribute="top" secondItem="dH4-C1-n9I" secondAttribute="top" priority="999" constant="284" id="lGX-h5-KW3">
+                                <variation key="heightClass=regular-widthClass=regular" constant="380"/>
                             </constraint>
                             <constraint firstItem="Rl2-LV-q9Z" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="o4s-Bx-42s"/>
                             <constraint firstItem="rDy-BE-aAK" firstAttribute="centerX" secondItem="d89-JP-Y2T" secondAttribute="centerX" id="q6x-WE-C75"/>

@@ -267,7 +267,7 @@ class MainViewController: UIViewController {
     
     fileprivate func presentActivityViewController() {
         
-        guard let _ = event.unixTime else { return }
+        guard let event = event, let _ = event.unixTime else { return }
         
         shareButton.isHidden = true
         infoButton.isHidden = true
@@ -310,6 +310,12 @@ class MainViewController: UIViewController {
         
         let viewController = UIActivityViewController(activityItems: [screenshot, caption], applicationActivities: nil)
         present(viewController, animated: true)
+        
+        //FIX TO CRASH WHILE PRESENTING ACTIVITY VIEW CONTROLLER ON iPads
+        if let popOver = viewController.popoverPresentationController {
+            popOver.sourceView = view
+            popOver.sourceRect = logoImageView.frame
+        }
         
     }
     
