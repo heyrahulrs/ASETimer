@@ -1,3 +1,5 @@
 # ASE Timer
-## A timer for Apple Special Events
-### (with ASE Widget)
+
+A beautiful countdown timer for Apple Special Events  (with ASE Widget)
+
+![ASE Timer](ASE-Timer.png)

@@ -70,6 +70,8 @@
 		2049DD2E1F5BC8810070A19D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2049DD311F5BC8810070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20600F0B217D95D5000EC028 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		20600F0C217D95E1000EC028 /* ASE-Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASE-Timer.png"; sourceTree = "<group>"; };
 		20603DA0211FF314007F38B0 /* URL-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL-Extension.swift"; sourceTree = "<group>"; };
 		207285FA2105D1920022B2A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		207D9EF421205AE9002055D6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -138,6 +140,8 @@
 		2049DD071F5BC4960070A19D = {
 			isa = PBXGroup;
 			children = (
+				20600F0B217D95D5000EC028 /* README.md */,
+				20600F0C217D95E1000EC028 /* ASE-Timer.png */,
 				2049DD121F5BC4960070A19D /* ASE Timer */,
 				2049DD2D1F5BC8810070A19D /* ASE Timer Widget */,
 				2049DD2A1F5BC8810070A19D /* Frameworks */,
