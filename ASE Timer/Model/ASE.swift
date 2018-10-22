@@ -13,6 +13,7 @@ class ASE {
     var title: String = ""
     var description: String = ""
     var unixTime: TimeInterval?
+    var checkForUpdatesAfterUnixTime: TimeInterval!
     
     init(json: [String: Any]) {
         
@@ -28,6 +29,12 @@ class ASE {
             self.unixTime = unixTime
         }
         
+        if let checkForUpdatesAfterUnixTime = json["checkForUpdatesAfterUnixTime"] as? TimeInterval {
+            self.checkForUpdatesAfterUnixTime = checkForUpdatesAfterUnixTime
+        }else{
+            checkForUpdatesAfterUnixTime = unixTime ?? 0
+        }
+        
     }
     
     func eventInfo() -> [String: Any] {
@@ -40,6 +47,8 @@ class ASE {
         
         data["title"] = title
         data["description"] = description
+        
+        data["checkForUpdatesAfterUnixTime"] = checkForUpdatesAfterUnixTime
         
         return data
         

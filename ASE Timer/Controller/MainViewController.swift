@@ -60,6 +60,8 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        let date = Date()
+        
         if UIDevice.deviceName == .iPhone4S {
             resetUI()
             showAlert(title: "Error", message: "This app doesn't support iPhone 4S.")
@@ -89,39 +91,74 @@ class MainViewController: UIViewController {
         
         setRandomAppleLogo()
         
-        // NOT CONNECTED TO NETWORK... LOAD LOCAL DATA.
-        guard Reachability.isConnectedToNetwork() else {
+        let isNetworkAvailable = Reachability.isConnectedToNetwork()
+
+        if let eventInfo = getObject(forKey: USER_DEFAULTS_KEY) as? [String: Any] {
             
-            print("Error: Device is not connected to network.")
-            
-            showAlert(title: "Error", message: NETWORK_NOT_AVAILABLE)
-            
-            if let eventInfo = getObject(forKey: USER_DEFAULTS_KEY) as? [String: Any] {
-                
-                let storedEvent = ASE(json: eventInfo)
-                
-                event = storedEvent
+            print("Info: Event Info is already saved on the device.")
+
+            event = ASE(json: eventInfo)
+
+            if event.checkForUpdatesAfterUnixTime < date.timeIntervalSince1970 {
+
+                if isNetworkAvailable {
+
+                    print("Info: Updating Event Info.")
+
+                    NetworkService.shared.downloadEventInfo { (event) in
+
+                        self.remove(forKey: USER_DEFAULTS_KEY)
+
+                        let data = event.eventInfo()
+                        self.save(value: data, forKey: USER_DEFAULTS_KEY)
+
+                        self.event = nil
+                        self.event = event
+                        self.setupTimer()
+                        self.setBackgroundImage()
+
+                    }
+
+                    print("Info: Updated Event Info.")
+
+                }else{
+                    print("Error: Device is not connected to network.")
+                    showAlert(title: "Error", message: UPDATE_REQUIRED_NETWORK_NOT_AVAILABLE)
+                }
+
+            }else{
+                print("Info: Updating app UI.")
                 setupTimer()
                 setBackgroundImage()
-                
             }
-            
-            return
+
+        }else{
+
+            print("Info: Downloading Event Info.")
+
+            if isNetworkAvailable {
+
+                NetworkService.shared.downloadEventInfo { (event) in
+
+                    let data = event.eventInfo()
+                    self.save(value: data, forKey: USER_DEFAULTS_KEY)
+
+                    self.event = nil
+                    self.event = event
+                    self.setupTimer()
+                    self.setBackgroundImage()
+
+                }
+
+                print("Info: Downloaded Event Info.")
+
+            }else{
+                print("Error: Device is not connected to network.")
+                showAlert(title: "Error", message: FIRST_LAUNCH_NETWORK_NOT_AVAILABLE)
+            }
+
         }
         
-        
-        // LOAD EVENT INFO FROM SERVER
-        NetworkService.shared.downloadEventInfo { (event) in
-            
-            self.remove(forKey: USER_DEFAULTS_KEY)
-            
-            let data = event.eventInfo()
-            self.save(value: data, forKey: USER_DEFAULTS_KEY)
-            
-            self.event = event
-            self.setupTimer()
-            self.setBackgroundImage()
-        }
         
     }
     

@@ -8,7 +8,9 @@
 
 //CONTSTANT STRINGS USED IN THE APP
 
-let NETWORK_NOT_AVAILABLE = "Device is not connected to network. The app is loading event info stored on the device. This event info might be outdated and will be updated once you connect to internet."
+let FIRST_LAUNCH_NETWORK_NOT_AVAILABLE = "Device is not connected to network. The app needs internet to retrieve data from the server. Please connect to the internet and try again."
+
+let UPDATE_REQUIRED_NETWORK_NOT_AVAILABLE = "Device is not connected to network. The app is loading event info stored on the device. The event info requires update and will be updated once you connect to internet."
 
 let KEYNOTE_IS_LIVE = "Keynote is now streaming live."
 
