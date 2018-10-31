@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
         
         resetUI()
         
-        setRandomAppleLogo()
+//        setLogoImage()
         
         let isNetworkAvailable = Reachability.isConnectedToNetwork()
 
@@ -168,7 +168,7 @@ class MainViewController: UIViewController {
         
         UIDevice.vibrate()
         
-        setRandomAppleLogo()
+//        setLogoImage()
         
         resetUI()
         
@@ -201,13 +201,8 @@ class MainViewController: UIViewController {
         backgroundImageView.image = nil
     }
     
-    fileprivate func setRandomAppleLogo() {
-        var newRandomNumber = Int.random(in: 1...10)
-        while newRandomNumber == randomNumber {
-            newRandomNumber = Int.random(in: 1...10)
-        }
-        randomNumber = newRandomNumber
-        let imageName = "hero_logo_\(randomNumber)"
+    fileprivate func setLogoImage() {
+        let imageName = "image_name"
         logoImageView.image = UIImage(named: imageName)
     }
     

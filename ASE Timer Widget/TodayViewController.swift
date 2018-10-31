@@ -20,9 +20,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let randomNumber = Int.random(in: 1...10)
-        let imageName = "hero_logo_\(randomNumber)"
-        eventLogoImageView.image = UIImage(named: imageName)
+//        setLogoImage()
         
         NetworkService.shared.downloadEventInfo { event in
             
@@ -34,6 +32,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             
         }
         
+    }
+    
+    fileprivate func setLogoImage() {
+        let imageName = "image_name"
+        eventLogoImageView.image = UIImage(named: imageName)
     }
     
     fileprivate func updateUI(for event: ASE) {
