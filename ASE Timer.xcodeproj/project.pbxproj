@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2009147421206EE300DFA5ED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD0221204284003A8AF7 /* Reachability.swift */; };
 		2009147521206EE500DFA5ED /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9EF421205AE9002055D6 /* Strings.swift */; };
-		2033E0D12179EE8B009DDEED /* HeroLogo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */; };
-		2033E0D22179EE8F009DDEED /* HeroLogo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */; };
 		2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD131F5BC4960070A19D /* AppDelegate.swift */; };
 		2049DD191F5BC4960070A19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD171F5BC4960070A19D /* Main.storyboard */; };
 		2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */; };
@@ -20,16 +17,17 @@
 		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
+		20580718223661A400C4B422 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20580717223661A400C4B422 /* InfoViewController.swift */; };
 		20603DA1211FF314007F38B0 /* URL-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20603DA0211FF314007F38B0 /* URL-Extension.swift */; };
-		207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
+		207285FB2105D1920022B2A9 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* EventManager.swift */; };
 		207D9EF521205AE9002055D6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D9EF421205AE9002055D6 /* Strings.swift */; };
+		2086D8E52234E7C100986BF4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086D8E42234E7C100986BF4 /* MainViewController.swift */; };
 		208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
 		208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FC41121118B41000228E0 /* UIDevice-Extension.swift */; };
-		209524122115537200A8EA1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209524112115537200A8EA1F /* MainViewController.swift */; };
 		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
-		20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* NetworkService.swift */; };
+		20AD9F742105D8B500DD9754 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* EventManager.swift */; };
 		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
-		20F5DD0321204284003A8AF7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD0221204284003A8AF7 /* Reachability.swift */; };
+		20C7A4D9223515CA005CC676 /* Int-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4D8223515CA005CC676 /* Int-Extension.swift */; };
 		20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +56,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HeroLogo.xcassets; sourceTree = "<group>"; };
 		2049DD101F5BC4960070A19D /* ASE Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASE Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049DD131F5BC4960070A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2049DD181F5BC4960070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,15 +67,15 @@
 		2049DD2E1F5BC8810070A19D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2049DD311F5BC8810070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2049DD331F5BC8810070A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20580717223661A400C4B422 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		20600F0B217D95D5000EC028 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		20600F0C217D95E1000EC028 /* ASE-Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASE-Timer.png"; sourceTree = "<group>"; };
 		20603DA0211FF314007F38B0 /* URL-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL-Extension.swift"; sourceTree = "<group>"; };
-		207285FA2105D1920022B2A9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		207285FA2105D1920022B2A9 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		207D9EF421205AE9002055D6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2086D8E42234E7C100986BF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		208FC41121118B41000228E0 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
-		209524112115537200A8EA1F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
-		20F5DD0221204284003A8AF7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		20C7A4D8223515CA005CC676 /* Int-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Extension.swift"; sourceTree = "<group>"; };
 		20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +101,8 @@
 		2009147121206EB600DFA5ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				209524112115537200A8EA1F /* MainViewController.swift */,
+				2086D8E42234E7C100986BF4 /* MainViewController.swift */,
+				20580717223661A400C4B422 /* InfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,8 +110,7 @@
 		2009147221206EC500DFA5ED /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				207285FA2105D1920022B2A9 /* NetworkService.swift */,
-				20F5DD0221204284003A8AF7 /* Reachability.swift */,
+				207285FA2105D1920022B2A9 /* EventManager.swift */,
 				207D9EF421205AE9002055D6 /* Strings.swift */,
 			);
 			path = "Helper Files";
@@ -125,6 +122,7 @@
 				20603DA0211FF314007F38B0 /* URL-Extension.swift */,
 				208FC41121118B41000228E0 /* UIDevice-Extension.swift */,
 				20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */,
+				20C7A4D8223515CA005CC676 /* Int-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				20600F0B217D95D5000EC028 /* README.md */,
-				20600F0C217D95E1000EC028 /* ASE-Timer.png */,
 				2049DD121F5BC4960070A19D /* ASE Timer */,
 				2049DD2D1F5BC8810070A19D /* ASE Timer Widget */,
 				2049DD2A1F5BC8810070A19D /* Frameworks */,
@@ -168,7 +165,6 @@
 				2009147321206EDC00DFA5ED /* Extensions */,
 				2049DD171F5BC4960070A19D /* Main.storyboard */,
 				2049DD1A1F5BC4960070A19D /* Assets.xcassets */,
-				2033E0D02179EE8B009DDEED /* HeroLogo.xcassets */,
 				2049DD1C1F5BC4960070A19D /* LaunchScreen.storyboard */,
 				2049DD1F1F5BC4960070A19D /* Info.plist */,
 			);
@@ -282,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2033E0D12179EE8B009DDEED /* HeroLogo.xcassets in Resources */,
 				2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */,
 				2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */,
 				2049DD191F5BC4960070A19D /* Main.storyboard in Resources */,
@@ -293,7 +288,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2033E0D22179EE8F009DDEED /* HeroLogo.xcassets in Resources */,
 				2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */,
 				2049DD321F5BC8810070A19D /* MainInterface.storyboard in Resources */,
 			);
@@ -327,14 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F5DD0321204284003A8AF7 /* Reachability.swift in Sources */,
 				207D9EF521205AE9002055D6 /* Strings.swift in Sources */,
+				20580718223661A400C4B422 /* InfoViewController.swift in Sources */,
 				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
-				207285FB2105D1920022B2A9 /* NetworkService.swift in Sources */,
+				207285FB2105D1920022B2A9 /* EventManager.swift in Sources */,
 				208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */,
 				20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */,
 				2049DD141F5BC4960070A19D /* AppDelegate.swift in Sources */,
-				209524122115537200A8EA1F /* MainViewController.swift in Sources */,
+				2086D8E52234E7C100986BF4 /* MainViewController.swift in Sources */,
+				20C7A4D9223515CA005CC676 /* Int-Extension.swift in Sources */,
 				20603DA1211FF314007F38B0 /* URL-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,9 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */,
-				20AD9F742105D8B500DD9754 /* NetworkService.swift in Sources */,
+				20AD9F742105D8B500DD9754 /* EventManager.swift in Sources */,
 				2049DD2F1F5BC8810070A19D /* TodayViewController.swift in Sources */,
-				2009147421206EE300DFA5ED /* Reachability.swift in Sources */,
 				2009147521206EE500DFA5ED /* Strings.swift in Sources */,
 				208FC41321118C06000228E0 /* UIDevice-Extension.swift in Sources */,
 			);

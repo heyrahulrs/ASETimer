@@ -9,41 +9,24 @@
 import UIKit
 import NotificationCenter
 
-typealias time = (days: Int, hours: Int, minutes: Int, seconds: Int)
-
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    @IBOutlet weak var eventHeadingLabel: UILabel!
     @IBOutlet weak var countdownTimerLabel: UILabel!
-    @IBOutlet weak var eventLogoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setLogoImage()
+        let event = EventManager.getEventInfo()
+        updateUI(for: event)
         
-        NetworkService.shared.downloadEventInfo { event in
-            
-            if let _ = event.unixTime {
-                self.updateUI(for: event)
-            }else{
-                self.updateCountdownLabel(withFallbackText: DATE_UNKOWN)
-            }
-            
-        }
-        
-    }
-    
-    fileprivate func setLogoImage() {
-        let imageName = "image_name"
-        eventLogoImageView.image = UIImage(named: imageName)
     }
     
     fileprivate func updateUI(for event: ASE) {
-        
-        eventHeadingLabel.text = event.title
-        
-        guard let eventUnixTime: TimeInterval = event.unixTime else { return }
+                
+        guard let eventUnixTime: TimeInterval = event.unixTime else {
+            updateCountdownLabel(withFallbackText: DATE_UNKOWN)
+            return
+        }
         
         let currentUnixTime = Date().timeIntervalSince1970
         
@@ -57,45 +40,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             return
         }
         
-        let (days, hours, minutes, _) = getDaysHoursMinutesSeconds(from: secondsUntilEvent)
+        let text = EventManager.getTextForWidget(from: secondsUntilEvent)
         
-        var text = ""
-        
-        if days != 0 {
-            
-            if days % 7 == 0 {
-                let weeks = days / 7
-                 text = weeks == 1 ? "\(weeks) week" : "\(weeks) weeks"
-            }else{
-                text = days == 1 ? "\(days) day" : "\(days) days"
-            }
-            
-        }else if hours != 0 {
-            text = hours == 1 ? "\(hours) hour" : "\(hours) hours"
-        }else if minutes != 0 {
-            text = minutes == 1 ? "\(minutes) minute" : "\(minutes) minutes"
+        if text == "" {
+            updateCountdownLabel(withFallbackText: LIVESTREAM_WILL_START_ANYTIME_NOW)
+            return
         }
         
-        countdownTimerLabel.text = text
+        countdownTimerLabel.text = text.uppercased()
         
     }
     
     fileprivate func updateCountdownLabel(withFallbackText text: String) {
-        
-        eventHeadingLabel.isHidden = true
-        
         countdownTimerLabel.text = text.uppercased()
-        countdownTimerLabel.font = UIFont.systemFont(ofSize: 20)
+        countdownTimerLabel.font = UIFont.systemFont(ofSize: 18)
         countdownTimerLabel.alpha = 0.7
-        
-    }
-    
-    fileprivate func getDaysHoursMinutesSeconds(from secondsUntilEvent: Double) -> time {
-        let days = Int(secondsUntilEvent / 86400)
-        let hours = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 86400) / 3600)
-        let minutes = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 3600) / 60)
-        let seconds = Int(secondsUntilEvent.truncatingRemainder(dividingBy: 60))
-        return (days, hours, minutes, seconds)
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {

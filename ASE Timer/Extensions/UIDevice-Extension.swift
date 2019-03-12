@@ -16,8 +16,9 @@ extension UIDevice {
         case iPhoneSE = "iPhoneSE"
         case iPhone8 = "iPhone8"
         case iPhone8Plus = "iPhone8Plus"
-        case iPhoneX = "iPhoneX"
+        case iPhoneXS = "iPhoneXS"
         case iPhoneXSMax = "iPhoneXSMax"
+        case iPhoneXR = "iPhoneXR"
         case iPad = "iPad"
         case unknown = "UnknownDevice"
     }
@@ -31,10 +32,12 @@ extension UIDevice {
             return .iPhoneSE
         case 1334:
             return .iPhone8
+        case 1792:
+            return .iPhoneXR
         case 1920, 2208:
             return .iPhone8Plus
         case 2436:
-            return .iPhoneX
+            return .iPhoneXS
         case 2688:
             return .iPhoneXSMax
         case 2048, 2224, 2732:

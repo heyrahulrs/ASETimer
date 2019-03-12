@@ -6,52 +6,18 @@
 //  Copyright © 2018 Rahul Sharma. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ASE {
+struct ASE {
     
-    var title: String = ""
-    var description: String = ""
+    var title: String
+    var description: String
     var unixTime: TimeInterval?
-    var checkForUpdatesAfterUnixTime: TimeInterval!
     
-    init(json: [String: Any]) {
-        
-        if let title = json["title"] as? String {
-            self.title = title
-        }
-
-        if let description = json["description"] as? String {
-            self.description = description
-        }
-
-        if let unixTime = json["unixTime"] as? TimeInterval {
-            self.unixTime = unixTime
-        }
-        
-        if let checkForUpdatesAfterUnixTime = json["checkForUpdatesAfterUnixTime"] as? TimeInterval {
-            self.checkForUpdatesAfterUnixTime = checkForUpdatesAfterUnixTime
-        }else{
-            checkForUpdatesAfterUnixTime = unixTime ?? 0
-        }
-        
-    }
-    
-    func eventInfo() -> [String: Any] {
-        
-        var data: [String: Any] = [:]
-        
-        if let eventUnixTime = unixTime {
-            data["unixTime"] = eventUnixTime
-        }
-        
-        data["title"] = title
-        data["description"] = description
-        
-        data["checkForUpdatesAfterUnixTime"] = checkForUpdatesAfterUnixTime
-        
-        return data
-        
+    init(title: String, description: String, unixTime: TimeInterval) {
+        self.title = title
+        self.description = description
+        self.unixTime = unixTime
     }
     
 }
