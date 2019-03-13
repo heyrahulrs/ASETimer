@@ -40,7 +40,7 @@ class InfoViewController: UITableViewController {
         
         let timeLeft = EventManager.getTextForWidget(from: secondsUntilEvent)
 
-        let text = "\(timeLeft) until \(event.title)"
+        let text = "\(timeLeft) until \(event.title). #AppleEvent"
 
         print(text)
         
