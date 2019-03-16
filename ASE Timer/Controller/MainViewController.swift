@@ -10,7 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    //MARK:- OUTLETS
+    
     @IBOutlet weak var infoLabel: UILabel!
+
+    @IBOutlet weak var logoImageView: UIImageView!
 
     @IBOutlet weak var eventHeadingLabel: UILabel!
 
@@ -23,6 +27,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var countdownStackView: UIStackView!
     
+    //MARK:- UI KIT METHODS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +37,9 @@ class MainViewController: UIViewController {
         let event = EventManager.getEventInfo()
         
         eventHeadingLabel.text = event.title
-                
+        
+        updateLogoImage()
+        
         guard let eventUnixTime = event.unixTime else {
             print("Info: No Date Known.")
             self.updateUI(withFallbackText: DATE_UNKOWN)
@@ -83,9 +91,15 @@ class MainViewController: UIViewController {
         
     }
     
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateLogoImage()
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    //MARK:- FUNCTIONS
     
     func updateUI(withCountdownTime countdownTime: Countdown) {
         daysLeftLabel.text = countdownTime.days.stringWithLeadingZeros
@@ -98,6 +112,17 @@ class MainViewController: UIViewController {
         infoLabel.alpha = 1.0; infoLabel.isHidden = false
         infoLabel.text = fallbackText
         countdownStackView.isHidden = true
+    }
+    
+    func updateLogoImage() {
+        let event = EventManager.getEventInfo()
+        if event.title == "WWDC 2019" {
+            let imageName = "WWDC2019-\(Int.random(in: 1...4))"
+            logoImageView.image = UIImage(named: imageName)
+        }else{
+            let imageName = event.title.replacingOccurrences(of: " ", with: "")
+            logoImageView.image = UIImage(named: imageName)
+        }
     }
     
     func resetUI() {

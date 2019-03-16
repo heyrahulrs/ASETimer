@@ -14,6 +14,7 @@ class EventManager {
     
     static var shared = EventManager()
     
+    /// Returns Upcoming Apple Special Event Info
     static func getEventInfo() -> ASE {
         
         if Date().timeIntervalSince1970 > 1553533200 {
@@ -36,7 +37,7 @@ class EventManager {
         return (days, hours, minutes, seconds)
     }
     
-    static func getTextForWidget(from secondsUntilEvent: Double) -> String {
+    static func getReadableText(from secondsUntilEvent: Double) -> String {
         
         let (days, hours, minutes, _) = getCountdownTime(from: secondsUntilEvent)
         

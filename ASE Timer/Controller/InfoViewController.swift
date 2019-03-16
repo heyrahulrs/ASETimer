@@ -11,6 +11,7 @@ import SafariServices
 
 class InfoViewController: UITableViewController {
 
+    //MARK: - UI KIT METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,9 +21,12 @@ class InfoViewController: UITableViewController {
         
     }
     
-    @IBAction func didTapEventLinkButton() {
+    //MARK: - IB ACTIONS
+    @IBAction func didTapEventLinkButton(_ sender: UIButton) {
         
-        let url = URL(staticString: "https://www.apple.com/apple-events/")
+        guard let title = sender.title(for: .normal) else { return }
+        
+        let url = URL(string: title)!
         
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
@@ -36,9 +40,11 @@ class InfoViewController: UITableViewController {
         let event = EventManager.getEventInfo()
         let currentUnixTime = Date().timeIntervalSince1970
         
-        let secondsUntilEvent =  event.unixTime! - currentUnixTime
+        guard let eventUnixTime = event.unixTime else { return }
         
-        let timeLeft = EventManager.getTextForWidget(from: secondsUntilEvent)
+        let secondsUntilEvent =  eventUnixTime - currentUnixTime
+        
+        let timeLeft = EventManager.getReadableText(from: secondsUntilEvent)
 
         let text = "\(timeLeft) until \(event.title). #AppleEvent"
 
@@ -56,6 +62,7 @@ class InfoViewController: UITableViewController {
 }
 
 
+//MARK: - SFSafariViewControllerDelegate
 extension InfoViewController: SFSafariViewControllerDelegate {
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

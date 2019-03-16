@@ -40,7 +40,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             return
         }
         
-        let text = EventManager.getTextForWidget(from: secondsUntilEvent)
+        let text = EventManager.getReadableText(from: secondsUntilEvent)
         
         if text == "" {
             updateCountdownLabel(withFallbackText: LIVESTREAM_WILL_START_ANYTIME_NOW)

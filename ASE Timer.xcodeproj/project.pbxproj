@@ -103,9 +103,9 @@
 		2009147121206EB600DFA5ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				20B74D9F223CD62000A7C643 /* InitialViewController.swift */,
 				2086D8E42234E7C100986BF4 /* MainViewController.swift */,
 				20580717223661A400C4B422 /* InfoViewController.swift */,
-				20B74D9F223CD62000A7C643 /* InitialViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

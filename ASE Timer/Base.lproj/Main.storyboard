@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="March2019Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RPU-zI-cJf" userLabel="Logo Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="March2019" translatesAutoresizingMaskIntoConstraints="NO" id="RPU-zI-cJf" userLabel="Logo Image View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="356"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="KAa-Kj-74P">
@@ -197,6 +197,7 @@
                         <outlet property="eventHeadingLabel" destination="cSj-7z-bQa" id="Cd1-5T-MrT"/>
                         <outlet property="hoursLeftLabel" destination="3Vu-Fs-tel" id="WdF-iv-y2N"/>
                         <outlet property="infoLabel" destination="OWx-XO-Jax" id="rwg-yB-sH4"/>
+                        <outlet property="logoImageView" destination="RPU-zI-cJf" id="HHo-xk-QhM"/>
                         <outlet property="minutesLeftLabel" destination="p2W-r3-jWp" id="GW0-wX-nho"/>
                         <outlet property="secondsLeftLabel" destination="jiD-Nz-VY8" id="Tmx-5M-Tvw"/>
                         <outletCollection property="seperatorLabels" destination="vRt-wd-9DL" collectionClass="NSMutableArray" id="ha5-FG-8An"/>
@@ -382,7 +383,7 @@
                                 <rect key="frame" x="0.0" y="82" width="414" height="355.5"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.074509803921568626" green="0.10196078431372549" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GLD-8j-txz" firstAttribute="centerX" secondItem="7xd-pB-Uwj" secondAttribute="centerX" id="1Z9-bE-IZ0"/>
                             <constraint firstItem="0cJ-v7-70e" firstAttribute="bottom" secondItem="ng5-p1-G72" secondAttribute="bottom" constant="18" id="4bU-rJ-Gt6"/>
@@ -413,6 +414,7 @@
                         <outlet property="eventHeadingLabel" destination="GLD-8j-txz" id="EK3-Fj-epw"/>
                         <outlet property="hoursLeftLabel" destination="zRm-fm-ntO" id="7d5-jx-Gq1"/>
                         <outlet property="infoLabel" destination="efF-Mj-K0D" id="xOM-gP-N3r"/>
+                        <outlet property="logoImageView" destination="Xby-Lg-w1d" id="nxr-y5-v5H"/>
                         <outlet property="minutesLeftLabel" destination="pes-1Z-aMw" id="AKB-oI-KR2"/>
                         <outlet property="secondsLeftLabel" destination="Pne-Ge-otw" id="xcm-z9-DQ9"/>
                         <outletCollection property="seperatorLabels" destination="QMP-LY-5ZW" collectionClass="NSMutableArray" id="OVm-CM-9Ne"/>
@@ -494,9 +496,9 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-d9-rEH">
                                                     <rect key="frame" x="6" y="6" width="402" height="31.5"/>
-                                                    <state key="normal" title="apple.com/apple-events"/>
+                                                    <state key="normal" title="https://apple.com/apple-events"/>
                                                     <connections>
-                                                        <action selector="didTapEventLinkButton" destination="qf9-4j-p2V" eventType="touchUpInside" id="9fe-S1-5Ah"/>
+                                                        <action selector="didTapEventLinkButton:" destination="qf9-4j-p2V" eventType="touchUpInside" id="t1I-be-WpR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -674,9 +676,9 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-sb-JIa">
                                                     <rect key="frame" x="6" y="6" width="402" height="31.5"/>
-                                                    <state key="normal" title="developer.apple.com/wwdc19"/>
+                                                    <state key="normal" title="https://developer.apple.com/wwdc19"/>
                                                     <connections>
-                                                        <action selector="didTapEventLinkButton" destination="qf9-4j-p2V" eventType="touchUpInside" id="cox-yh-wFM"/>
+                                                        <action selector="didTapEventLinkButton:" destination="MPQ-qS-pDo" eventType="touchUpInside" id="gR9-73-22f"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -703,7 +705,7 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
                                                     <rect key="frame" x="6" y="6" width="402" height="31.5"/>
                                                     <state key="normal" title="Share Countdown"/>
                                                     <connections>
-                                                        <action selector="didTapShareCountdownButton" destination="qf9-4j-p2V" eventType="touchUpInside" id="4wQ-nj-4W3"/>
+                                                        <action selector="didTapShareCountdownButton" destination="MPQ-qS-pDo" eventType="touchUpInside" id="8av-WB-xUn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -947,6 +949,7 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
         </scene>
     </scenes>
     <resources>
+        <image name="March2019" width="320" height="356"/>
         <image name="March2019Logo" width="320" height="356"/>
         <image name="More Icon" width="38" height="38"/>
         <image name="WWDC2019-1" width="375" height="265"/>
