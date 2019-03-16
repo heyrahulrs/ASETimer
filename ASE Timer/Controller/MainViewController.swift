@@ -120,8 +120,7 @@ class MainViewController: UIViewController {
             let imageName = "WWDC2019-\(Int.random(in: 1...4))"
             logoImageView.image = UIImage(named: imageName)
         }else{
-            let imageName = event.title.replacingOccurrences(of: " ", with: "")
-            logoImageView.image = UIImage(named: imageName)
+            logoImageView.image = UIImage(named: "March2019")
         }
     }
     
