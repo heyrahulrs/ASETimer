@@ -15,12 +15,17 @@ class EventManager {
     static var shared = EventManager()
     
     static func getEventInfo() -> ASE {
-//        return ASE(title: "WWDC 2019",
-//                   description: "Apple Special Event June 2019",
-//                   unixTime: 1559581200)
+        
+        if Date().timeIntervalSince1970 > 1553533200 {
+            return ASE(title: "WWDC 2019",
+                       description: "San Jose, CA, June 3–7\nThis is not an invitation. It‘s a challenge.\nThis is your chance to join thousands of coders, creators, and crazy ones this summer to do the insanely great.",
+                       unixTime: 1559581200)
+        }
+        
         return ASE(title: "Apple Special Event",
                    description: "Live from the Steve Jobs Theater in Cupertino. March 25, 2019, at 10:00 a.m.",
                    unixTime: 1553533200)
+        
     }
     
     static func getCountdownTime(from secondsUntilEvent: Double) -> Countdown {
