@@ -12,6 +12,7 @@ import SafariServices
 class InfoViewController: UITableViewController {
 
     //MARK: - UI KIT METHODS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,7 @@ class InfoViewController: UITableViewController {
     }
     
     //MARK: - IB ACTIONS
+    
     @IBAction func didTapEventLinkButton(_ sender: UIButton) {
         
         guard let title = sender.title(for: .normal) else { return }
@@ -61,8 +63,8 @@ class InfoViewController: UITableViewController {
 
 }
 
-
 //MARK: - SFSafariViewControllerDelegate
+
 extension InfoViewController: SFSafariViewControllerDelegate {
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

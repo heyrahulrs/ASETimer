@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainViewController: UIViewController {
     
@@ -27,10 +28,14 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var countdownStackView: UIStackView!
     
+    @IBOutlet weak var viewLivestreamButton: UIButton!
+    
     //MARK:- UI KIT METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewLivestreamButton.isHidden = true
         
         resetUI()
 
@@ -55,6 +60,7 @@ class MainViewController: UIViewController {
                 self.updateUI(withFallbackText: EVENT_CONCLUDED)
                 timer.invalidate()
             }else if secondsLeftUntilEvent <= 0 {
+                self.viewLivestreamButton.isHidden = false
                 self.updateUI(withFallbackText: KEYNOTE_IS_LIVE)
                 timer.invalidate()
             }
@@ -99,6 +105,17 @@ class MainViewController: UIViewController {
         return .lightContent
     }
     
+    //MARK:- IB ACTIONS
+    
+    @IBAction func didTapViewLivestreamButton() {
+        let url = URL(staticString: "https://apple.com/apple-events/livestream")
+        
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+        
+        present(safariViewController, animated: true)
+    }
+    
     //MARK:- FUNCTIONS
     
     func updateUI(withCountdownTime countdownTime: Countdown) {
@@ -131,4 +148,14 @@ class MainViewController: UIViewController {
         secondsLeftLabel.text = "00"
     }
 
+}
+
+//MARK: - SFSafariViewControllerDelegate
+
+extension MainViewController: SFSafariViewControllerDelegate {
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true)
+    }
+    
 }

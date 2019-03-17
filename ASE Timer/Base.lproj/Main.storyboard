@@ -154,6 +154,16 @@
                                     <segue destination="E2F-FC-wq8" kind="show" id="0HF-r5-Z3j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8Y-7F-C50">
+                                <rect key="frame" x="146.5" y="815" width="121" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="View Livestream">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapViewLivestreamButton" destination="BGJ-Rt-c3d" eventType="touchUpInside" id="Txc-fk-8io"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -170,6 +180,8 @@
                             <constraint firstItem="RPU-zI-cJf" firstAttribute="trailing" secondItem="qBY-3d-p7Z" secondAttribute="trailing" id="Vk2-zs-CeW"/>
                             <constraint firstItem="RPU-zI-cJf" firstAttribute="centerX" secondItem="liX-7X-4oi" secondAttribute="centerX" id="Yav-z1-3Z4"/>
                             <constraint firstItem="KAa-Kj-74P" firstAttribute="top" secondItem="RPU-zI-cJf" secondAttribute="bottom" constant="8" id="bFq-6u-qC4"/>
+                            <constraint firstItem="C8Y-7F-C50" firstAttribute="centerX" secondItem="liX-7X-4oi" secondAttribute="centerX" id="d0x-Op-GVD"/>
+                            <constraint firstItem="C8Y-7F-C50" firstAttribute="centerY" secondItem="oCr-1U-3yW" secondAttribute="centerY" id="gVV-LD-6uX"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OWx-XO-Jax" secondAttribute="trailing" constant="28" id="iXF-Vb-TsQ"/>
                             <constraint firstItem="KAa-Kj-74P" firstAttribute="centerX" secondItem="liX-7X-4oi" secondAttribute="centerX" id="iy7-93-8ep"/>
                             <constraint firstItem="qBY-3d-p7Z" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cSj-7z-bQa" secondAttribute="trailing" constant="18" id="ju3-ef-1b3"/>
@@ -200,6 +212,7 @@
                         <outlet property="logoImageView" destination="RPU-zI-cJf" id="HHo-xk-QhM"/>
                         <outlet property="minutesLeftLabel" destination="p2W-r3-jWp" id="GW0-wX-nho"/>
                         <outlet property="secondsLeftLabel" destination="jiD-Nz-VY8" id="Tmx-5M-Tvw"/>
+                        <outlet property="viewLivestreamButton" destination="C8Y-7F-C50" id="6AQ-Ja-0FD"/>
                         <outletCollection property="seperatorLabels" destination="vRt-wd-9DL" collectionClass="NSMutableArray" id="ha5-FG-8An"/>
                         <outletCollection property="seperatorLabels" destination="BRa-Vd-1DM" collectionClass="NSMutableArray" id="JX6-oj-c03"/>
                         <outletCollection property="seperatorLabels" destination="KkS-iC-mDK" collectionClass="NSMutableArray" id="D8w-mV-jtL"/>
@@ -382,6 +395,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="WWDC2019-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Lg-w1d">
                                 <rect key="frame" x="0.0" y="82" width="414" height="355.5"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-Uj-dtx">
+                                <rect key="frame" x="146.5" y="815" width="121" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="View Livestream">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapViewLivestreamButton" destination="7GF-cd-W9L" eventType="touchUpInside" id="o9t-m5-DBL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -396,7 +419,9 @@
                             <constraint firstItem="pIg-zc-Xp8" firstAttribute="centerY" secondItem="7xd-pB-Uwj" secondAttribute="centerY" constant="120" id="LQP-6t-qkc"/>
                             <constraint firstItem="Xby-Lg-w1d" firstAttribute="trailing" secondItem="0cJ-v7-70e" secondAttribute="trailing" id="NHO-r1-8aJ"/>
                             <constraint firstItem="efF-Mj-K0D" firstAttribute="centerY" secondItem="pIg-zc-Xp8" secondAttribute="centerY" id="Qck-Qo-asE"/>
+                            <constraint firstItem="4Sh-Uj-dtx" firstAttribute="centerY" secondItem="ng5-p1-G72" secondAttribute="centerY" id="SAW-P9-fGV"/>
                             <constraint firstItem="efF-Mj-K0D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0cJ-v7-70e" secondAttribute="leading" constant="28" id="UgJ-Df-Ls5"/>
+                            <constraint firstItem="4Sh-Uj-dtx" firstAttribute="centerX" secondItem="7xd-pB-Uwj" secondAttribute="centerX" id="ZeJ-dT-pxc"/>
                             <constraint firstItem="GLD-8j-txz" firstAttribute="top" secondItem="Xby-Lg-w1d" secondAttribute="bottom" constant="38" id="aVW-TJ-q7t">
                                 <variation key="heightClass=compact-widthClass=compact" constant="18"/>
                             </constraint>
@@ -417,6 +442,7 @@
                         <outlet property="logoImageView" destination="Xby-Lg-w1d" id="nxr-y5-v5H"/>
                         <outlet property="minutesLeftLabel" destination="pes-1Z-aMw" id="AKB-oI-KR2"/>
                         <outlet property="secondsLeftLabel" destination="Pne-Ge-otw" id="xcm-z9-DQ9"/>
+                        <outlet property="viewLivestreamButton" destination="4Sh-Uj-dtx" id="xmv-5s-4G1"/>
                         <outletCollection property="seperatorLabels" destination="QMP-LY-5ZW" collectionClass="NSMutableArray" id="OVm-CM-9Ne"/>
                         <outletCollection property="seperatorLabels" destination="4AN-Cs-pZx" collectionClass="NSMutableArray" id="Mhn-4U-Uss"/>
                         <outletCollection property="seperatorLabels" destination="ekv-1G-R3t" collectionClass="NSMutableArray" id="G2H-dS-BiN"/>
