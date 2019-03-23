@@ -30,6 +30,7 @@
 		20B74DA0223CD62000A7C643 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B74D9F223CD62000A7C643 /* InitialViewController.swift */; };
 		20C7A4D9223515CA005CC676 /* Int-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4D8223515CA005CC676 /* Int-Extension.swift */; };
 		20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */; };
+		20FF9B602246345F002635D3 /* ASE-Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FF9B5F2246345F002635D3 /* ASE-Timer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		20B74D9F223CD62000A7C643 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		20C7A4D8223515CA005CC676 /* Int-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Extension.swift"; sourceTree = "<group>"; };
 		20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		20FF9B5F2246345F002635D3 /* ASE-Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASE-Timer.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				20600F0B217D95D5000EC028 /* README.md */,
+				20FF9B5F2246345F002635D3 /* ASE-Timer.png */,
 				2049DD121F5BC4960070A19D /* ASE Timer */,
 				2049DD2D1F5BC8810070A19D /* ASE Timer Widget */,
 				2049DD2A1F5BC8810070A19D /* Frameworks */,
@@ -285,6 +288,7 @@
 				2049DD1E1F5BC4960070A19D /* LaunchScreen.storyboard in Resources */,
 				2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */,
 				2049DD191F5BC4960070A19D /* Main.storyboard in Resources */,
+				20FF9B602246345F002635D3 /* ASE-Timer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
