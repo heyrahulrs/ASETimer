@@ -9,7 +9,13 @@
 import UIKit
 import SafariServices
 
+protocol MyDelegate {
+    func didTapShareCountdownTimeButton(atUnixTime unixTime: TimeInterval)
+}
+
 class InfoViewController: UITableViewController {
+    
+    var delegate: MyDelegate?
 
     //MARK: - UI KIT METHODS
     
@@ -38,23 +44,8 @@ class InfoViewController: UITableViewController {
     }
     
     @IBAction func didTapShareCountdownButton() {
-        
-        let event = EventManager.getEventInfo()
-        let currentUnixTime = Date().timeIntervalSince1970
-        
-        guard let eventUnixTime = event.unixTime else { return }
-        
-        let secondsUntilEvent =  eventUnixTime - currentUnixTime
-        
-        let timeLeft = EventManager.getReadableText(from: secondsUntilEvent)
-
-        let text = "\(timeLeft) until \(event.title). #AppleEvent"
-
-        print(text)
-        
-        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: [])
-        present(activityViewController, animated: true)
-        
+        self.dismiss(animated: true)
+        delegate?.didTapShareCountdownTimeButton(atUnixTime: Date().timeIntervalSince1970)
     }
     
     @IBAction func didTapDoneButton() {

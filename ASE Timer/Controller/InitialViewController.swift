@@ -14,8 +14,10 @@ class InitialViewController: UIViewController {
         super.viewDidAppear(animated)
         
         var identifier = ""
-
-        if Date().timeIntervalSince1970 > 1553533200 {
+        
+        let event = EventManager.getEventInfo()
+        
+        if event.title == "WWDC 2019" {
             identifier = "WWDC2019ViewController"
         }else{
             identifier = "March2019ViewController"

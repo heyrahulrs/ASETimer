@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 class MainViewController: UIViewController {
     
@@ -28,14 +27,12 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var countdownStackView: UIStackView!
     
-    @IBOutlet weak var viewLivestreamButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
     
     //MARK:- UI KIT METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewLivestreamButton.isHidden = true
         
         resetUI()
 
@@ -59,14 +56,12 @@ class MainViewController: UIViewController {
             if secondsLeftUntilEvent <= -7200 {
                 self.updateUI(withFallbackText: EVENT_CONCLUDED)
                 timer.invalidate()
-            }else if secondsLeftUntilEvent <= 0 {
-                self.viewLivestreamButton.isHidden = false
+            }else if secondsLeftUntilEvent < 0 {
                 self.updateUI(withFallbackText: KEYNOTE_IS_LIVE)
                 timer.invalidate()
             }
             
             let countdownTime = EventManager.getCountdownTime(from: secondsLeftUntilEvent)
-            
             self.updateUI(withCountdownTime: countdownTime)
 
         }
@@ -107,13 +102,21 @@ class MainViewController: UIViewController {
     
     //MARK:- IB ACTIONS
     
-    @IBAction func didTapViewLivestreamButton() {
-        let url = URL(staticString: "https://apple.com/apple-events/livestream")
+    @IBAction func didTapInfoButton() {
+        let event = EventManager.getEventInfo()
+        let title = event.title.replacingOccurrences(of: " ", with: "")
         
-        let safariViewController = SFSafariViewController(url: url)
-        safariViewController.delegate = self
+        let identifier = "UINavigationController\(title)"
+        print(identifier)
+
+        let nextViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! UINavigationController        
         
-        present(safariViewController, animated: true)
+        nextViewController.modalPresentationStyle = .popover
+        
+        let infoViewController = nextViewController.viewControllers.first as! InfoViewController
+        infoViewController.delegate = self
+        
+        self.present(nextViewController, animated: true)
     }
     
     //MARK:- FUNCTIONS
@@ -129,6 +132,12 @@ class MainViewController: UIViewController {
         infoLabel.alpha = 1.0; infoLabel.isHidden = false
         infoLabel.text = fallbackText
         countdownStackView.isHidden = true
+    }
+    
+    func revertFromFallbackUI() {
+        infoLabel.alpha = 0.0; infoLabel.isHidden = true
+        infoLabel.text = ""
+        countdownStackView.isHidden = false
     }
     
     func updateLogoImage() {
@@ -150,12 +159,32 @@ class MainViewController: UIViewController {
 
 }
 
-//MARK: - SFSafariViewControllerDelegate
+//MARK: - MyDelegate
 
-extension MainViewController: SFSafariViewControllerDelegate {
+extension MainViewController: MyDelegate {
     
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true)
+    func didTapShareCountdownTimeButton(atUnixTime unixTime: TimeInterval) {
+        
+        let event = EventManager.getEventInfo()
+        
+        guard let eventUnixTime = event.unixTime else { return }
+        
+        let secondsUntilEvent =  eventUnixTime - unixTime
+        
+        let timeLeft = EventManager.getReadableText(from: secondsUntilEvent)
+        
+        updateUI(withFallbackText: timeLeft)
+        infoButton.isHidden = true
+        
+        let image  = view.takeScreenshot()
+        
+        revertFromFallbackUI()
+        infoButton.isHidden = false
+        
+        let activityViewController = UIActivityViewController(activityItems: [image, timeLeft], applicationActivities: [])
+        
+        present(activityViewController, animated: true)
+                
     }
     
 }
