@@ -103,11 +103,8 @@ class MainViewController: UIViewController {
     //MARK:- IB ACTIONS
     
     @IBAction func didTapInfoButton() {
-        let event = EventManager.getEventInfo()
-        let title = event.title.replacingOccurrences(of: " ", with: "")
         
-        let identifier = "UINavigationController\(title)"
-        print(identifier)
+        let identifier = "UINavigationController"
 
         let nextViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! UINavigationController        
         
@@ -141,13 +138,8 @@ class MainViewController: UIViewController {
     }
     
     func updateLogoImage() {
-        let event = EventManager.getEventInfo()
-        if event.title == "WWDC 2019" {
-            let imageName = "WWDC2019-\(Int.random(in: 1...4))"
-            logoImageView.image = UIImage(named: imageName)
-        }else{
-            logoImageView.image = UIImage(named: "March2019")
-        }
+        let imageName = "WWDC2019-\(Int.random(in: 1...4))"
+        logoImageView.image = UIImage(named: imageName)
     }
     
     func resetUI() {

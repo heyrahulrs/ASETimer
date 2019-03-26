@@ -28,7 +28,6 @@
 		20AD014B20EDD93300CA1386 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 		20AD9F742105D8B500DD9754 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* EventManager.swift */; };
 		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
-		20B74DA0223CD62000A7C643 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B74D9F223CD62000A7C643 /* InitialViewController.swift */; };
 		20C7A4D9223515CA005CC676 /* Int-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4D8223515CA005CC676 /* Int-Extension.swift */; };
 		20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */; };
 		20FF9B602246345F002635D3 /* ASE-Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FF9B5F2246345F002635D3 /* ASE-Timer.png */; };
@@ -79,7 +78,6 @@
 		2086D8E42234E7C100986BF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		208FC41121118B41000228E0 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
-		20B74D9F223CD62000A7C643 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		20C7A4D8223515CA005CC676 /* Int-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Extension.swift"; sourceTree = "<group>"; };
 		20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 		20FF9B5F2246345F002635D3 /* ASE-Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASE-Timer.png"; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		2009147121206EB600DFA5ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				20B74D9F223CD62000A7C643 /* InitialViewController.swift */,
 				2086D8E42234E7C100986BF4 /* MainViewController.swift */,
 				20580717223661A400C4B422 /* InfoViewController.swift */,
 			);
@@ -335,7 +332,6 @@
 				204ED9ED2247A46E0008F825 /* UIView-Extension.swift in Sources */,
 				207D9EF521205AE9002055D6 /* Strings.swift in Sources */,
 				20580718223661A400C4B422 /* InfoViewController.swift in Sources */,
-				20B74DA0223CD62000A7C643 /* InitialViewController.swift in Sources */,
 				20AD014B20EDD93300CA1386 /* ASE.swift in Sources */,
 				207285FB2105D1920022B2A9 /* EventManager.swift in Sources */,
 				208FC41221118B41000228E0 /* UIDevice-Extension.swift in Sources */,

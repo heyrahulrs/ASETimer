@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.10196078431372549" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QbY-ce-fB2" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="AQt-v4-2Rs"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QbY-ce-fB2" secondAttribute="trailing" constant="24" id="HZd-5x-o7A"/>
