@@ -23,6 +23,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var minutesLeftLabel: UILabel!
     @IBOutlet weak var secondsLeftLabel: UILabel!
     
+    @IBOutlet weak var daysHoursSeparator: UILabel!
+    @IBOutlet weak var hoursMinutesSeparator: UILabel!
+    @IBOutlet weak var minutesSecondsSeparator: UILabel!
+    
+    @IBOutlet weak var daysLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
+    
     @IBOutlet var seperatorLabels: [UILabel]!
     
     @IBOutlet weak var countdownStackView: UIStackView!
@@ -71,12 +80,6 @@ class MainViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if UIDevice.deviceName == .iPhone4S {
-            resetUI()
-            showAlert(title: "Sorry", message: "Sorry. This app doesn't support iPhone 4S.")
-            return
-        }
                 
         if UIDevice.deviceName == .iPhoneSE {
             
@@ -132,9 +135,32 @@ class MainViewController: UIViewController {
     }
     
     func revertFromFallbackUI() {
+        
         infoLabel.alpha = 0.0; infoLabel.isHidden = true
         infoLabel.text = ""
         countdownStackView.isHidden = false
+        
+        daysLeftLabel.isHidden = false
+        hoursLeftLabel.isHidden = false
+        minutesLeftLabel.isHidden = false
+        secondsLeftLabel.isHidden = false
+        
+        daysHoursSeparator.isHidden = false
+        hoursMinutesSeparator.isHidden = false
+        minutesSecondsSeparator.isHidden = false
+        
+        daysLabel.isHidden = false
+        hoursLabel.isHidden = false
+        minutesLabel.isHidden = false
+        secondsLabel.isHidden = false
+        
+        daysLabel.text = "Days".uppercased()
+        hoursLabel.text = "Hours".uppercased()
+        minutesLabel.text = "Minutes".uppercased()
+        secondsLabel.text = "Seconds".uppercased()
+        
+        infoButton.isHidden = false
+        
     }
     
     func updateLogoImage() {
@@ -163,17 +189,84 @@ extension MainViewController: MyDelegate {
         
         let secondsUntilEvent =  eventUnixTime - unixTime
         
-        let timeLeft = EventManager.getReadableText(from: secondsUntilEvent)
+        let countdownTimeLeft = EventManager.getCountdownTime(from: secondsUntilEvent)
         
-        updateUI(withFallbackText: timeLeft)
-        infoButton.isHidden = true
+        var text = ""
+        
+        daysHoursSeparator.isHidden = true
+        hoursMinutesSeparator.isHidden = true
+        minutesSecondsSeparator.isHidden = true
+        
+        if countdownTimeLeft.days != 0 {
+            
+            if countdownTimeLeft.days == 1 {
+                text = "\(countdownTimeLeft.days) day until \(event.hashtag)."
+                daysLabel.text = "DAY"
+            }else{
+                text = "\(countdownTimeLeft.days) days until \(event.hashtag)."
+            }
+            
+            hoursLeftLabel.isHidden = true
+            minutesLeftLabel.isHidden = true
+            secondsLeftLabel.isHidden = true
+            
+            hoursLabel.isHidden = true
+            minutesLabel.isHidden = true
+            secondsLabel.isHidden = true
+            
+        } else if countdownTimeLeft.hours != 0 {
+            
+            if countdownTimeLeft.days == 1 {
+                text = "\(countdownTimeLeft.hours) hour until \(event.hashtag)."
+                hoursLabel.text = "HOUR"
+            }else{
+                text = "\(countdownTimeLeft.hours) hours until \(event.hashtag)."
+            }
+            
+            daysLeftLabel.isHidden = true
+            minutesLeftLabel.isHidden = true
+            secondsLeftLabel.isHidden = true
+            
+            daysLabel.isHidden = true
+            minutesLabel.isHidden = true
+            secondsLabel.isHidden = true
+            
+        } else if countdownTimeLeft.minutes != 0 {
+            
+            if countdownTimeLeft.minutes == 1 {
+                text = "\(countdownTimeLeft.minutes) minute until \(event.hashtag)."
+                minutesLabel.text = "MINUTE"
+            }else{
+                text = "\(countdownTimeLeft.minutes) minutes until \(event.hashtag)."
+            }
+            
+            daysLeftLabel.isHidden = true
+            hoursLeftLabel.isHidden = true
+            secondsLeftLabel.isHidden = true
+            
+            daysLabel.isHidden = true
+            hoursLabel.isHidden = true
+            secondsLabel.isHidden = true
+            
+        } else if countdownTimeLeft.seconds != 0 {
+            
+            text = "\(countdownTimeLeft.seconds) seconds until \(event.hashtag)."
+            
+            daysLeftLabel.isHidden = true
+            hoursLeftLabel.isHidden = true
+            minutesLeftLabel.isHidden = true
+            
+            daysLabel.isHidden = true
+            hoursLabel.isHidden = true
+            minutesLabel.isHidden = true
+            
+        }
         
         let image  = view.takeScreenshot()
         
         revertFromFallbackUI()
-        infoButton.isHidden = false
         
-        let activityViewController = UIActivityViewController(activityItems: [image, timeLeft], applicationActivities: [])
+        let activityViewController = UIActivityViewController(activityItems: [image, text], applicationActivities: [])
         
         present(activityViewController, animated: true)
                 

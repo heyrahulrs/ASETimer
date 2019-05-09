@@ -14,6 +14,10 @@ struct ASE {
     var description: String
     var unixTime: TimeInterval?
     
+    var hashtag: String {
+        return "#" + title.replacingOccurrences(of: " ", with: "")
+    }
+    
     init(title: String, description: String, unixTime: TimeInterval) {
         self.title = title
         self.description = description
