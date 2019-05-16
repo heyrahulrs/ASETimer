@@ -14,7 +14,6 @@ class InterfaceController: WKInterfaceController {
     var event: ASE?
     
     @IBOutlet weak var eventTitleLabel: WKInterfaceLabel!
-    @IBOutlet weak var timeRemainingLabel: WKInterfaceLabel!
 
     @IBOutlet weak var timeLeftTimer: WKInterfaceTimer!
 
