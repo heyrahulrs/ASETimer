@@ -23,6 +23,9 @@
                         </group>
                         <group width="1" height="0.69999999999999996" alignment="left" id="O5t-Sv-SsI">
                             <items>
+                                <label alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="2" id="qe0-ln-bUr">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                </label>
                                 <timer alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="3" format="abbreviated" previewedSeconds="1597600" id="9E4-Jr-6gJ">
                                     <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
                                     <calendarUnit key="units" day="YES" hour="YES" minute="YES"/>
@@ -32,6 +35,7 @@
                     </items>
                     <connections>
                         <outlet property="eventTitleLabel" destination="5hP-9J-Ule" id="kgh-Kl-xND"/>
+                        <outlet property="infoLabel" destination="qe0-ln-bUr" id="VBX-a7-48O"/>
                         <outlet property="timeLeftTimer" destination="9E4-Jr-6gJ" id="CiA-xJ-dtb"/>
                     </connections>
                 </controller>
