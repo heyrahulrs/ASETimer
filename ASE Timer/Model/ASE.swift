@@ -15,10 +15,13 @@ struct ASE {
     var unixTime: TimeInterval?
     
     var hashtag: String {
+        if title == "Apple Special Event" {
+            return "#AppleEvent"
+        }
         return "#" + title.replacingOccurrences(of: " ", with: "")
     }
     
-    init(title: String, description: String, unixTime: TimeInterval) {
+    init(title: String, description: String, unixTime: TimeInterval?) {
         self.title = title
         self.description = description
         self.unixTime = unixTime

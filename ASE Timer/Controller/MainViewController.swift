@@ -99,10 +99,6 @@ class MainViewController: UIViewController {
         updateLogoImage()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     //MARK:- IB ACTIONS
     
     @IBAction func didTapInfoButton() {
@@ -164,7 +160,7 @@ class MainViewController: UIViewController {
     }
     
     func updateLogoImage() {
-        let imageName = "WWDC2019-\(Int.random(in: 1...4))"
+        let imageName = ""
         logoImageView.image = UIImage(named: imageName)
     }
     
@@ -196,6 +192,8 @@ extension MainViewController: MyDelegate {
         daysHoursSeparator.isHidden = true
         hoursMinutesSeparator.isHidden = true
         minutesSecondsSeparator.isHidden = true
+        
+        infoButton.isHidden = true
         
         if countdownTimeLeft.days != 0 {
             

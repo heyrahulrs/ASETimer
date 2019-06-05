@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GF-cd-W9L">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GF-cd-W9L">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +28,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayj-jx-8DX">
                                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="71.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="52"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="74"/>
@@ -38,7 +36,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-ph-IiA">
                                                         <rect key="frame" x="19.666666666666671" y="71.333333333333314" width="28" height="12"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -49,7 +46,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-LY-5ZW">
                                                 <rect key="frame" x="69.333333333333343" y="0.0" width="14.333333333333329" height="62.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="74"/>
@@ -66,7 +62,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRm-fm-ntO">
                                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="71.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="52"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="74"/>
@@ -75,7 +70,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-ZS-X5M">
                                                         <rect key="frame" x="14.999999999999996" y="71.333333333333314" width="37.666666666666657" height="12"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -86,7 +80,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AN-Cs-pZx">
                                                 <rect key="frame" x="69.333333333333343" y="0.0" width="14.333333333333329" height="62.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="74"/>
@@ -103,7 +96,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pes-1Z-aMw">
                                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="71.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="52"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="74"/>
@@ -112,7 +104,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINUTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtY-3A-Q8d">
                                                         <rect key="frame" x="9.6666666666666892" y="71.333333333333314" width="48.333333333333343" height="12"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -123,7 +114,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-1G-R3t">
                                                 <rect key="frame" x="69.333333333333343" y="0.0" width="14.333333333333329" height="62.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="74"/>
@@ -137,7 +127,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pne-Ge-otw">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="71.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="52"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="74"/>
@@ -146,7 +135,6 @@
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECONDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmr-FG-nYw">
                                                 <rect key="frame" x="8.3333333333333712" y="71.333333333333314" width="51" height="12"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -157,18 +145,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-8j-txz">
-                                <rect key="frame" x="81.333333333333329" y="433.33333333333331" width="212.66666666666669" height="43"/>
+                                <rect key="frame" x="81" y="433.33333333333331" width="213" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                 </variation>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keynote is now streaming live." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efF-Mj-K0D">
-                                <rect key="frame" x="68.333333333333329" y="485.33333333333331" width="238.66666666666669" height="81.333333333333314"/>
+                                <rect key="frame" x="68.333333333333329" y="505.33333333333331" width="238.66666666666669" height="81.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
@@ -183,17 +169,17 @@
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="More Icon"/>
                                 <connections>
                                     <action selector="didTapInfoButton" destination="7GF-cd-W9L" eventType="touchUpInside" id="9aW-7d-N33"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="WWDC2019-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Lg-w1d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Lg-w1d">
                                 <rect key="frame" x="0.0" y="82" width="375" height="313.33333333333331"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.070588235289999995" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="GLD-8j-txz" firstAttribute="centerX" secondItem="7xd-pB-Uwj" secondAttribute="centerX" id="1Z9-bE-IZ0"/>
                             <constraint firstItem="0cJ-v7-70e" firstAttribute="bottom" secondItem="ng5-p1-G72" secondAttribute="bottom" constant="18" id="4bU-rJ-Gt6"/>
@@ -208,7 +194,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="256"/>
                             </constraint>
                             <constraint firstItem="Xby-Lg-w1d" firstAttribute="trailing" secondItem="0cJ-v7-70e" secondAttribute="trailing" id="NHO-r1-8aJ"/>
-                            <constraint firstItem="efF-Mj-K0D" firstAttribute="centerY" secondItem="pIg-zc-Xp8" secondAttribute="centerY" id="Qck-Qo-asE"/>
+                            <constraint firstItem="efF-Mj-K0D" firstAttribute="centerY" secondItem="pIg-zc-Xp8" secondAttribute="centerY" constant="20" id="Qck-Qo-asE"/>
                             <constraint firstItem="efF-Mj-K0D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0cJ-v7-70e" secondAttribute="leading" constant="28" id="UgJ-Df-Ls5"/>
                             <constraint firstItem="GLD-8j-txz" firstAttribute="top" secondItem="Xby-Lg-w1d" secondAttribute="bottom" constant="38" id="aVW-TJ-q7t">
                                 <variation key="heightClass=compact-widthClass=compact" constant="18"/>
@@ -255,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="1198.5507246376812" y="950.89285714285711"/>
         </scene>
-        <!--WWDC 2019-->
+        <!--Apple Special Event-->
         <scene sceneID="t3J-E7-GXM">
             <objects>
                 <tableViewController id="MPQ-qS-pDo" customClass="InfoViewController" customModule="ASE_Timer" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,15 +252,15 @@
                         <sections>
                             <tableViewSection id="oOw-eU-jgH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="86Z-J5-PZ6">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="86Z-J5-PZ6">
+                                        <rect key="frame" x="0.0" y="18" width="375" height="1.1920928955078125e-07"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="86Z-J5-PZ6" id="xkb-JM-fIj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1.1920928955078125e-07"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWDC2019-WithText" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-e0-lBH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -287,43 +273,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Lad-Oi-6Ag">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eBA-a3-eDo">
-                                        <rect key="frame" x="0.0" y="251" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eBA-a3-eDo" id="pd0-P2-VJn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Code. Blow Minds." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhS-a3-14e">
-                                                    <rect key="frame" x="94" y="11.666666666666666" width="187" height="20.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="MhS-a3-14e" firstAttribute="centerY" secondItem="pd0-P2-VJn" secondAttribute="centerY" id="Uzj-0W-HVs"/>
-                                                <constraint firstItem="MhS-a3-14e" firstAttribute="centerX" secondItem="pd0-P2-VJn" secondAttribute="centerX" id="snn-Ts-3FM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="T8i-eZ-7wz">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="8uU-Op-ND4">
-                                        <rect key="frame" x="0.0" y="331" width="375" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="8uU-Op-ND4">
+                                        <rect key="frame" x="0.0" y="54.00000011920929" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8uU-Op-ND4" id="kcb-Sm-PL1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-fY-ULs">
-                                                    <rect key="frame" x="18" y="7.9999999999999964" width="339" height="55.666666666666657"/>
-                                                    <string key="text">Apple Worldwide Developers Conference
-San Jose, CA, June 3–7</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live from Steve Jobs Theatre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-fY-ULs">
+                                                    <rect key="frame" x="18" y="8" width="339" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -337,54 +297,30 @@ San Jose, CA, June 3–7</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="3GV-pN-iVL">
-                                        <rect key="frame" x="0.0" y="403" width="375" height="114"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3GV-pN-iVL" id="kVx-g6-R90">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113.66666666666667"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-v2-5HU">
-                                                    <rect key="frame" x="18" y="8" width="339" height="97.666666666666671"/>
-                                                    <string key="text">This is not an invitation. It‘s a challenge.
-This is your chance to join thousands of coders, creators, and crazy ones this summer to do the insanely great.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="dfJ-v2-5HU" firstAttribute="leading" secondItem="kVx-g6-R90" secondAttribute="leading" constant="18" id="9N0-Iu-GGu"/>
-                                                <constraint firstItem="dfJ-v2-5HU" firstAttribute="top" secondItem="kVx-g6-R90" secondAttribute="top" constant="8" id="ayk-U7-3Nb"/>
-                                                <constraint firstAttribute="bottom" secondItem="dfJ-v2-5HU" secondAttribute="bottom" constant="8" id="hFp-n8-uUl"/>
-                                                <constraint firstAttribute="trailing" secondItem="dfJ-v2-5HU" secondAttribute="trailing" constant="18" id="zLm-HY-Y7X"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="bsN-My-xqw">
+                            <tableViewSection id="5Ag-2m-jdh">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fT1-LR-PR2">
-                                        <rect key="frame" x="0.0" y="553" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0az-Km-Apv">
+                                        <rect key="frame" x="0.0" y="138.00000011920929" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fT1-LR-PR2" id="jMv-Si-rtN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0az-Km-Apv" id="jgO-zx-Yh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-sb-JIa">
-                                                    <rect key="frame" x="6" y="6.0000000000000018" width="363" height="31.666666666666671"/>
-                                                    <state key="normal" title="https://developer.apple.com/wwdc19"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-bZ-Zj1">
+                                                    <rect key="frame" x="6" y="6" width="363" height="32"/>
+                                                    <state key="normal" title="Watch Keynote Live"/>
                                                     <connections>
-                                                        <action selector="didTapEventLinkButton:" destination="MPQ-qS-pDo" eventType="touchUpInside" id="gR9-73-22f"/>
+                                                        <action selector="didTapWatchKeynoteButton" destination="MPQ-qS-pDo" eventType="touchUpInside" id="o7i-L8-3fb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rbr-sb-JIa" firstAttribute="top" secondItem="jMv-Si-rtN" secondAttribute="top" constant="6" id="FPe-Xz-smR"/>
-                                                <constraint firstAttribute="bottom" secondItem="rbr-sb-JIa" secondAttribute="bottom" constant="6" id="Z5b-M6-weU"/>
-                                                <constraint firstItem="rbr-sb-JIa" firstAttribute="leading" secondItem="jMv-Si-rtN" secondAttribute="leading" constant="6" id="d8q-63-hjQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="rbr-sb-JIa" secondAttribute="trailing" constant="6" id="yVD-G3-B2E"/>
+                                                <constraint firstItem="iLf-bZ-Zj1" firstAttribute="top" secondItem="jgO-zx-Yh3" secondAttribute="top" constant="6" id="Boh-Rm-Qs6"/>
+                                                <constraint firstAttribute="trailing" secondItem="iLf-bZ-Zj1" secondAttribute="trailing" constant="6" id="aAG-ER-j4C"/>
+                                                <constraint firstItem="iLf-bZ-Zj1" firstAttribute="leading" secondItem="jgO-zx-Yh3" secondAttribute="leading" constant="6" id="i6x-DC-9cv"/>
+                                                <constraint firstAttribute="bottom" secondItem="iLf-bZ-Zj1" secondAttribute="bottom" constant="6" id="muk-CA-2yR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -393,14 +329,14 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
                             <tableViewSection id="Ag5-FV-Av8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="taI-3s-Xe5">
-                                        <rect key="frame" x="0.0" y="633" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="218.00000011920929" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="taI-3s-Xe5" id="Lpa-k9-V9W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-6x-7Fj">
-                                                    <rect key="frame" x="6" y="6.0000000000000018" width="363" height="31.666666666666671"/>
+                                                    <rect key="frame" x="6" y="6" width="363" height="32"/>
                                                     <state key="normal" title="Share Countdown"/>
                                                     <connections>
                                                         <action selector="didTapShareCountdownButton" destination="MPQ-qS-pDo" eventType="touchUpInside" id="8av-WB-xUn"/>
@@ -423,7 +359,7 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
                             <outlet property="delegate" destination="MPQ-qS-pDo" id="7tK-JQ-age"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="WWDC 2019" id="4Vd-Yt-VCV">
+                    <navigationItem key="navigationItem" title="Apple Special Event" id="4Vd-Yt-VCV">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Q2E-Mn-vvJ">
                             <connections>
                                 <action selector="didTapDoneButton" destination="MPQ-qS-pDo" id="wSq-0g-50f"/>
@@ -456,7 +392,6 @@ This is your chance to join thousands of coders, creators, and crazy ones this s
     </scenes>
     <resources>
         <image name="More Icon" width="38" height="38"/>
-        <image name="WWDC2019-1" width="375" height="265"/>
         <image name="WWDC2019-WithText" width="1706.6666259765625" height="416"/>
     </resources>
 </document>

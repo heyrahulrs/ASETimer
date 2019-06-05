@@ -16,9 +16,9 @@ class EventManager {
     
     /// Returns Upcoming Apple Special Event Info
     static func getEventInfo() -> ASE {
-        return ASE(title: "WWDC 2019",
-                   description: "San Jose, CA, June 3–7\nThis is not an invitation. It‘s a challenge.\nThis is your chance to join thousands of coders, creators, and crazy ones this summer to do the insanely great.",
-                   unixTime: 1559581200)
+        return ASE(title: "Apple Special Event",
+                   description: "Live from Steve Jobs Theatre.",
+                   unixTime: nil)
     }
     
     static func getCountdownTime(from secondsUntilEvent: Double) -> Countdown {

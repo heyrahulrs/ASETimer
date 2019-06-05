@@ -17,9 +17,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         
         let event = EventManager.getEventInfo()
-        
-        view.backgroundColor = #colorLiteral(red: 0.07058823529, green: 0.1019607843, blue: 0.1843137255, alpha: 1)
-        
         updateUI(for: event)
         
     }

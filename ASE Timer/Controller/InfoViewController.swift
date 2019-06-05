@@ -34,7 +34,18 @@ class InfoViewController: UITableViewController {
         
         guard let title = sender.title(for: .normal) else { return }
         
-        let url = URL(string: title)!
+        let url = URL(string: "https://" + title)!
+        
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+        
+        present(safariViewController, animated: true)
+        
+    }
+    
+    @IBAction func didTapWatchKeynoteButton() {
+        
+        let url = URL(string: "https://www.apple.com/apple-events/livestream")!
         
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self

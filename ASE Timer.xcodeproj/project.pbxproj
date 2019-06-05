@@ -30,16 +30,6 @@
 		20AD9F752105D8CA00DD9754 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 		20C7A4D9223515CA005CC676 /* Int-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4D8223515CA005CC676 /* Int-Extension.swift */; };
 		20F5DD05212042F6003A8AF7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */; };
-		20FB1A04228D1ED5003C8054 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FB1A02228D1ED5003C8054 /* Interface.storyboard */; };
-		20FB1A06228D1ED7003C8054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FB1A05228D1ED7003C8054 /* Assets.xcassets */; };
-		20FB1A0D228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 20FB1A0C228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		20FB1A12228D1ED7003C8054 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB1A11228D1ED7003C8054 /* InterfaceController.swift */; };
-		20FB1A14228D1ED7003C8054 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB1A13228D1ED7003C8054 /* ExtensionDelegate.swift */; };
-		20FB1A16228D1ED7003C8054 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB1A15228D1ED7003C8054 /* NotificationController.swift */; };
-		20FB1A18228D1ED7003C8054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FB1A17228D1ED7003C8054 /* Assets.xcassets */; };
-		20FB1A1D228D1ED7003C8054 /* ASE Timer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 20FB1A00228D1ED5003C8054 /* ASE Timer WatchKit App.app */; };
-		20FB1A26228D219E003C8054 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207285FA2105D1920022B2A9 /* EventManager.swift */; };
-		20FB1A27228D21E0003C8054 /* ASE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD014A20EDD93300CA1386 /* ASE.swift */; };
 		20FF9B602246345F002635D3 /* ASE-Timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FF9B5F2246345F002635D3 /* ASE-Timer.png */; };
 /* End PBXBuildFile section */
 
@@ -50,20 +40,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2049DD281F5BC8810070A19D;
 			remoteInfo = "ASE Timer Widget";
-		};
-		20FB1A0E228D1ED7003C8054 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2049DD081F5BC4960070A19D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20FB1A0B228D1ED7003C8054;
-			remoteInfo = "ASE Timer WatchKit App Extension";
-		};
-		20FB1A1B228D1ED7003C8054 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2049DD081F5BC4960070A19D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20FB19FF228D1ED5003C8054;
-			remoteInfo = "ASE Timer WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,28 +53,6 @@
 				2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20FB1A23228D1ED7003C8054 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				20FB1A0D228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20FB1A25228D1ED7003C8054 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				20FB1A1D228D1ED7003C8054 /* ASE Timer WatchKit App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -126,17 +80,6 @@
 		20AD014A20EDD93300CA1386 /* ASE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASE.swift; sourceTree = "<group>"; };
 		20C7A4D8223515CA005CC676 /* Int-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Extension.swift"; sourceTree = "<group>"; };
 		20F5DD04212042F6003A8AF7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
-		20FB1A00228D1ED5003C8054 /* ASE Timer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASE Timer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FB1A03228D1ED5003C8054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		20FB1A05228D1ED7003C8054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		20FB1A07228D1ED7003C8054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20FB1A0C228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ASE Timer WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FB1A11228D1ED7003C8054 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		20FB1A13228D1ED7003C8054 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		20FB1A15228D1ED7003C8054 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		20FB1A17228D1ED7003C8054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		20FB1A19228D1ED7003C8054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20FB1A1A228D1ED7003C8054 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		20FF9B5F2246345F002635D3 /* ASE-Timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASE-Timer.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,13 +96,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2049DD2C1F5BC8810070A19D /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20FB1A09228D1ED7003C8054 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +147,6 @@
 				20FF9B5F2246345F002635D3 /* ASE-Timer.png */,
 				2049DD121F5BC4960070A19D /* ASE Timer */,
 				2049DD2D1F5BC8810070A19D /* ASE Timer Widget */,
-				20FB1A01228D1ED5003C8054 /* ASE Timer WatchKit App */,
-				20FB1A10228D1ED7003C8054 /* ASE Timer WatchKit App Extension */,
 				2049DD2A1F5BC8810070A19D /* Frameworks */,
 				2049DD111F5BC4960070A19D /* Products */,
 			);
@@ -223,8 +157,6 @@
 			children = (
 				2049DD101F5BC4960070A19D /* ASE Timer.app */,
 				2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */,
-				20FB1A00228D1ED5003C8054 /* ASE Timer WatchKit App.app */,
-				20FB1A0C228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,29 +195,6 @@
 			path = "ASE Timer Widget";
 			sourceTree = "<group>";
 		};
-		20FB1A01228D1ED5003C8054 /* ASE Timer WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				20FB1A02228D1ED5003C8054 /* Interface.storyboard */,
-				20FB1A05228D1ED7003C8054 /* Assets.xcassets */,
-				20FB1A07228D1ED7003C8054 /* Info.plist */,
-			);
-			path = "ASE Timer WatchKit App";
-			sourceTree = "<group>";
-		};
-		20FB1A10228D1ED7003C8054 /* ASE Timer WatchKit App Extension */ = {
-			isa = PBXGroup;
-			children = (
-				20FB1A11228D1ED7003C8054 /* InterfaceController.swift */,
-				20FB1A13228D1ED7003C8054 /* ExtensionDelegate.swift */,
-				20FB1A15228D1ED7003C8054 /* NotificationController.swift */,
-				20FB1A17228D1ED7003C8054 /* Assets.xcassets */,
-				20FB1A19228D1ED7003C8054 /* Info.plist */,
-				20FB1A1A228D1ED7003C8054 /* PushNotificationPayload.apns */,
-			);
-			path = "ASE Timer WatchKit App Extension";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,13 +207,11 @@
 				2049DD0E1F5BC4960070A19D /* Resources */,
 				2049DD3A1F5BC8810070A19D /* Embed App Extensions */,
 				2009147721206FBD00DFA5ED /* Increment Build */,
-				20FB1A25228D1ED7003C8054 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2049DD351F5BC8810070A19D /* PBXTargetDependency */,
-				20FB1A1C228D1ED7003C8054 /* PBXTargetDependency */,
 			);
 			name = "ASE Timer";
 			productName = "ASE Timer";
@@ -327,40 +234,6 @@
 			productName = "ASE Timer Widget";
 			productReference = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		20FB19FF228D1ED5003C8054 /* ASE Timer WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20FB1A24228D1ED7003C8054 /* Build configuration list for PBXNativeTarget "ASE Timer WatchKit App" */;
-			buildPhases = (
-				20FB19FE228D1ED5003C8054 /* Resources */,
-				20FB1A23228D1ED7003C8054 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20FB1A0F228D1ED7003C8054 /* PBXTargetDependency */,
-			);
-			name = "ASE Timer WatchKit App";
-			productName = "ASE Timer WatchKit App";
-			productReference = 20FB1A00228D1ED5003C8054 /* ASE Timer WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		20FB1A0B228D1ED7003C8054 /* ASE Timer WatchKit App Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20FB1A22228D1ED7003C8054 /* Build configuration list for PBXNativeTarget "ASE Timer WatchKit App Extension" */;
-			buildPhases = (
-				20FB1A08228D1ED7003C8054 /* Sources */,
-				20FB1A09228D1ED7003C8054 /* Frameworks */,
-				20FB1A0A228D1ED7003C8054 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ASE Timer WatchKit App Extension";
-			productName = "ASE Timer WatchKit App Extension";
-			productReference = 20FB1A0C228D1ED7003C8054 /* ASE Timer WatchKit App Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -386,14 +259,6 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1020;
 					};
-					20FB19FF228D1ED5003C8054 = {
-						CreatedOnToolsVersion = 10.2;
-						ProvisioningStyle = Automatic;
-					};
-					20FB1A0B228D1ED7003C8054 = {
-						CreatedOnToolsVersion = 10.2;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 2049DD0B1F5BC4960070A19D /* Build configuration list for PBXProject "ASE Timer" */;
@@ -411,8 +276,6 @@
 			targets = (
 				2049DD0F1F5BC4960070A19D /* ASE Timer */,
 				2049DD281F5BC8810070A19D /* ASE Timer Widget */,
-				20FB19FF228D1ED5003C8054 /* ASE Timer WatchKit App */,
-				20FB1A0B228D1ED7003C8054 /* ASE Timer WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -438,29 +301,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FB19FE228D1ED5003C8054 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20FB1A06228D1ED7003C8054 /* Assets.xcassets in Resources */,
-				20FB1A04228D1ED5003C8054 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20FB1A0A228D1ED7003C8054 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20FB1A18228D1ED7003C8054 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		2009147721206FBD00DFA5ED /* Increment Build */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -472,7 +318,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
@@ -509,18 +355,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FB1A08228D1ED7003C8054 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20FB1A16228D1ED7003C8054 /* NotificationController.swift in Sources */,
-				20FB1A14228D1ED7003C8054 /* ExtensionDelegate.swift in Sources */,
-				20FB1A26228D219E003C8054 /* EventManager.swift in Sources */,
-				20FB1A27228D21E0003C8054 /* ASE.swift in Sources */,
-				20FB1A12228D1ED7003C8054 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -528,16 +362,6 @@
 			isa = PBXTargetDependency;
 			target = 2049DD281F5BC8810070A19D /* ASE Timer Widget */;
 			targetProxy = 2049DD341F5BC8810070A19D /* PBXContainerItemProxy */;
-		};
-		20FB1A0F228D1ED7003C8054 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20FB1A0B228D1ED7003C8054 /* ASE Timer WatchKit App Extension */;
-			targetProxy = 20FB1A0E228D1ED7003C8054 /* PBXContainerItemProxy */;
-		};
-		20FB1A1C228D1ED7003C8054 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20FB19FF228D1ED5003C8054 /* ASE Timer WatchKit App */;
-			targetProxy = 20FB1A1B228D1ED7003C8054 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -564,14 +388,6 @@
 				2049DD311F5BC8810070A19D /* Base */,
 			);
 			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		20FB1A02228D1ED5003C8054 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20FB1A03228D1ED5003C8054 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -627,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -680,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -754,92 +570,6 @@
 			};
 			name = Release;
 		};
-		20FB1A1E228D1ED7003C8054 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6R75J2CEEH;
-				IBSC_MODULE = ASE_Timer_WatchKit_App_Extension;
-				INFOPLIST_FILE = "ASE Timer WatchKit App/Info.plist";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Debug;
-		};
-		20FB1A1F228D1ED7003C8054 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6R75J2CEEH;
-				IBSC_MODULE = ASE_Timer_WatchKit_App_Extension;
-				INFOPLIST_FILE = "ASE Timer WatchKit App/Info.plist";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Release;
-		};
-		20FB1A20228D1ED7003C8054 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6R75J2CEEH;
-				INFOPLIST_FILE = "ASE Timer WatchKit App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Debug;
-		};
-		20FB1A21228D1ED7003C8054 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6R75J2CEEH;
-				INFOPLIST_FILE = "ASE Timer WatchKit App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -866,24 +596,6 @@
 			buildConfigurations = (
 				2049DD381F5BC8810070A19D /* Debug */,
 				2049DD391F5BC8810070A19D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20FB1A22228D1ED7003C8054 /* Build configuration list for PBXNativeTarget "ASE Timer WatchKit App Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20FB1A20228D1ED7003C8054 /* Debug */,
-				20FB1A21228D1ED7003C8054 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20FB1A24228D1ED7003C8054 /* Build configuration list for PBXNativeTarget "ASE Timer WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20FB1A1E228D1ED7003C8054 /* Debug */,
-				20FB1A1F228D1ED7003C8054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
