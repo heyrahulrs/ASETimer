@@ -160,7 +160,7 @@
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng5-p1-G72" userLabel="Menu Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng5-p1-G72" userLabel="Menu Button">
                                 <rect key="frame" x="327" y="732" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ng5-p1-G72" secondAttribute="height" multiplier="1:1" id="VnZ-BP-U9a"/>
@@ -168,9 +168,8 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" image="More Icon"/>
+                                <state key="normal" title="􀍢" image="More Icon"/>
                                 <connections>
                                     <action selector="didTapInfoButton" destination="7GF-cd-W9L" eventType="touchUpInside" id="9aW-7d-N33"/>
                                 </connections>
