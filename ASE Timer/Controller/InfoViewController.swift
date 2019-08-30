@@ -9,13 +9,13 @@
 import UIKit
 import SafariServices
 
-protocol MyDelegate {
+protocol EventSharingDelegate {
     func didTapShareCountdownTimeButton(atUnixTime unixTime: TimeInterval)
 }
 
 class InfoViewController: UITableViewController {
     
-    var delegate: MyDelegate?
+    var delegate: EventSharingDelegate?
 
     //MARK: - UI KIT METHODS
     
@@ -29,19 +29,6 @@ class InfoViewController: UITableViewController {
     }
     
     //MARK: - IB ACTIONS
-    
-    @IBAction func didTapEventLinkButton(_ sender: UIButton) {
-        
-        guard let title = sender.title(for: .normal) else { return }
-        
-        let url = URL(string: "https://" + title)!
-        
-        let safariViewController = SFSafariViewController(url: url)
-        safariViewController.delegate = self
-        
-        present(safariViewController, animated: true)
-        
-    }
     
     @IBAction func didTapWatchKeynoteButton() {
         

@@ -1,13 +1,568 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GF-cd-W9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GF-cd-W9L" initialMenu="AjT-VN-iYA">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 beta 5 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main Menu-->
+        <scene sceneID="Jji-q3-xK2">
+            <objects>
+                <menu isSystemItem="YES" title="Main Menu" identifier="com.apple.menu.root" id="AjT-VN-iYA" sceneMemberID="viewController">
+                    <children>
+                        <menu isSystemItem="YES" title="Application" identifier="com.apple.menu.application" id="ORj-RZ-p4U">
+                            <children>
+                                <menu isSystemItem="YES" title="About" identifier="com.apple.menu.about" id="JJj-t8-Fyo">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="About Application" discoverabilityTitle="" propertyListString="" id="il1-QF-L0g">
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" destination="EnG-PU-6GW" id="2Nl-pL-n4R"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="orderFrontStandardAboutPanel:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" title="Hide" identifier="com.apple.menu.hide" id="J2p-XD-W1i">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Hide Application" discoverabilityTitle="" propertyListString="" input="h" id="d10-cA-xvS">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="hide:" destination="EnG-PU-6GW" id="hjd-c8-SjB"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Hide Others" discoverabilityTitle="" propertyListString="" input="h" id="9R7-YB-wKS">
+                                            <keyModifierFlags key="modifierFlags" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" destination="EnG-PU-6GW" id="3WL-1g-OQA"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Show All" discoverabilityTitle="" propertyListString="" id="omg-Be-bQ5">
+                                            <connections>
+                                                <action selector="unhideAllApplications:" destination="EnG-PU-6GW" id="Glz-EG-GLT"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="hide:"/>
+                                        <itemDeletion anchorAction="hideOtherApplications:"/>
+                                        <itemDeletion anchorAction="unhideAllApplications:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.quit" id="Sww-fV-JKf">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Quit Application" discoverabilityTitle="" propertyListString="" input="q" id="iuh-nE-73c">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="terminate:" destination="EnG-PU-6GW" id="gri-iQ-kn6"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="terminate:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="File" identifier="com.apple.menu.file" id="SqX-O4-8mx">
+                            <children>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.close" id="IPm-mO-aRx">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Share" input="s" id="HQ5-KQ-U16">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="didTapShareCountdownButton" destination="EnG-PU-6GW" id="1ul-So-pF7"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Close" discoverabilityTitle="" propertyListString="" input="w" id="Ogu-nz-0Mh">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <alternates>
+                                                <commandAlternate title="Close All" actionName="closeAll:" id="mFu-es-5vC">
+                                                    <keyModifierFlags key="modifierFlags" option="YES"/>
+                                                </commandAlternate>
+                                            </alternates>
+                                            <connections>
+                                                <action selector="performClose:" destination="EnG-PU-6GW" id="RBa-KQ-IZl"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="performClose:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="Edit" identifier="com.apple.menu.edit" id="JkB-Y4-W9u">
+                            <children>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.undo-redo" id="4dn-LX-Kcb">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Undo" discoverabilityTitle="" propertyListString="" input="z" id="Bjo-LN-dRa">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="undo:" destination="EnG-PU-6GW" id="uJe-Aj-Ur0"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Redo" discoverabilityTitle="" propertyListString="" input="z" id="JuH-HQ-itE">
+                                            <keyModifierFlags key="modifierFlags" shift="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="redo:" destination="EnG-PU-6GW" id="IAY-nL-mkj"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="undo:"/>
+                                        <itemDeletion anchorAction="redo:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.standard-edit" id="Ddt-gG-7IB">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Cut" discoverabilityTitle="" propertyListString="" input="x" id="qRC-RD-rWM">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="cut:" destination="EnG-PU-6GW" id="VJb-Jo-xpd"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Copy" discoverabilityTitle="" propertyListString="" input="c" id="7pY-x2-wwD">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="copy:" destination="EnG-PU-6GW" id="QC8-Uh-g3M"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Paste" discoverabilityTitle="" propertyListString="" input="v" id="AZL-Yf-Okk">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="paste:" destination="EnG-PU-6GW" id="GWy-YG-TE0"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Delete" discoverabilityTitle="" propertyListString="" id="AvU-bj-1Xe">
+                                            <connections>
+                                                <action selector="delete:" destination="EnG-PU-6GW" id="He5-Jz-AgT"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Select All" discoverabilityTitle="" propertyListString="" input="a" id="nXJ-cs-cFl">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="selectAll:" destination="EnG-PU-6GW" id="YJV-w9-WK9"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="cut:"/>
+                                        <itemDeletion anchorAction="copy:"/>
+                                        <itemDeletion anchorAction="paste:"/>
+                                        <itemDeletion anchorAction="delete:"/>
+                                        <itemDeletion anchorAction="selectAll:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.find" id="CFb-7u-hrf">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Find…" discoverabilityTitle="" propertyListString="" input="f" id="fXd-4d-TCe">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="performFindPanelAction:" destination="EnG-PU-6GW" id="Tvw-eK-DJC"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="performFindPanelAction:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" title="Spelling and Grammar" identifier="com.apple.menu.spelling" id="VpZ-cl-N7a">
+                                    <children>
+                                        <menu isSystemItem="YES" identifier="com.apple.menu.spelling-panel" id="CK7-Zh-uUv">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Show Spelling and Grammar" discoverabilityTitle="" propertyListString="" input=":" id="y6F-Bc-1ci">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="showGuessPanel:" destination="EnG-PU-6GW" id="ZWk-82-ezI"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Check Document Now" discoverabilityTitle="" propertyListString="" input=";" id="9lW-rr-xFc">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="checkSpelling:" destination="EnG-PU-6GW" id="D0d-Lq-Gim"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="showGuessPanel:"/>
+                                                <itemDeletion anchorAction="checkSpelling:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" identifier="com.apple.menu.spelling-options" id="fai-t5-KFK">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Check Spelling While Typing" discoverabilityTitle="" propertyListString="" id="SYW-NM-RTE">
+                                                    <connections>
+                                                        <action selector="toggleContinuousSpellChecking:" destination="EnG-PU-6GW" id="3nk-7G-6do"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Check Grammar With Spelling" discoverabilityTitle="" propertyListString="" id="J1S-qO-qJl">
+                                                    <connections>
+                                                        <action selector="toggleGrammarChecking:" destination="EnG-PU-6GW" id="8Dq-4W-PRw"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Correct Spelling Automatically" discoverabilityTitle="" propertyListString="" id="5ei-pz-NEY">
+                                                    <connections>
+                                                        <action selector="toggleAutomaticSpellingCorrection:" destination="EnG-PU-6GW" id="Q8G-CN-bIF"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="toggleContinuousSpellChecking:"/>
+                                                <itemDeletion anchorAction="toggleGrammarChecking:"/>
+                                                <itemDeletion anchorAction="toggleAutomaticSpellingCorrection:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                    </children>
+                                </menu>
+                                <menu isSystemItem="YES" title="Substitutions" identifier="com.apple.menu.substitutions" id="MPc-SW-6sz">
+                                    <children>
+                                        <menu isSystemItem="YES" identifier="com.apple.menu.substitutions-panel" id="dUX-zT-RHQ">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Smart Substitutions" discoverabilityTitle="" propertyListString="" id="G5i-of-Vo1">
+                                                    <connections>
+                                                        <action selector="orderFrontSubstitutionsPanel:" destination="EnG-PU-6GW" id="L61-IQ-g83"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="orderFrontSubstitutionsPanel:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" identifier="com.apple.menu.substitution-options" id="0pi-vs-ON9">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Smart Copy/Paste" discoverabilityTitle="" propertyListString="" id="hH3-dc-yVt">
+                                                    <connections>
+                                                        <action selector="toggleSmartInsertDelete:" destination="EnG-PU-6GW" id="1yo-5I-nJK"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Smart Quotes" discoverabilityTitle="" propertyListString="" id="LyX-dQ-4Eb">
+                                                    <connections>
+                                                        <action selector="toggleAutomaticQuoteSubstitution:" destination="EnG-PU-6GW" id="0Du-iw-ptv"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Smart Dashes" discoverabilityTitle="" propertyListString="" id="8wM-4Q-PHP">
+                                                    <connections>
+                                                        <action selector="toggleAutomaticDashSubstitution:" destination="EnG-PU-6GW" id="fAe-85-Aty"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Smart Links" discoverabilityTitle="" propertyListString="" id="nvb-OE-udc">
+                                                    <connections>
+                                                        <action selector="toggleAutomaticLinkDetection:" destination="EnG-PU-6GW" id="iHL-eD-jVU"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Text Replacement" discoverabilityTitle="" propertyListString="" id="ZEa-qD-keu">
+                                                    <connections>
+                                                        <action selector="toggleAutomaticTextReplacement:" destination="EnG-PU-6GW" id="Mzg-Gm-4AM"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="toggleSmartInsertDelete:"/>
+                                                <itemDeletion anchorAction="toggleAutomaticQuoteSubstitution:"/>
+                                                <itemDeletion anchorAction="toggleAutomaticDashSubstitution:"/>
+                                                <itemDeletion anchorAction="toggleAutomaticLinkDetection:"/>
+                                                <itemDeletion anchorAction="toggleAutomaticTextReplacement:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                    </children>
+                                </menu>
+                                <menu isSystemItem="YES" title="Transformations" identifier="com.apple.menu.transformations" id="Iv5-nS-hje">
+                                    <children>
+                                        <command title="Make Upper Case" discoverabilityTitle="" propertyListString="" id="EeD-1I-PUj">
+                                            <connections>
+                                                <action selector="uppercaseWord:" destination="EnG-PU-6GW" id="b9E-bC-EHR"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Make Lower Case" discoverabilityTitle="" propertyListString="" id="zw9-dP-gKD">
+                                            <connections>
+                                                <action selector="lowercaseWord:" destination="EnG-PU-6GW" id="x9V-v6-vdY"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Capitalize" discoverabilityTitle="" propertyListString="" id="A6q-fE-NML">
+                                            <connections>
+                                                <action selector="capitalizeWord:" destination="EnG-PU-6GW" id="N19-0C-bSS"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="uppercaseWord:"/>
+                                        <itemDeletion anchorAction="lowercaseWord:"/>
+                                        <itemDeletion anchorAction="capitalizeWord:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" title="Speech" identifier="com.apple.command.speech" id="Xo0-eW-Dx0">
+                                    <children>
+                                        <command title="Start Speaking" discoverabilityTitle="" propertyListString="" id="OtY-ft-a1w">
+                                            <connections>
+                                                <action selector="startSpeaking:" destination="EnG-PU-6GW" id="W9n-BZ-eQC"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Stop Speaking" discoverabilityTitle="" propertyListString="" id="VHZ-1q-ymV">
+                                            <connections>
+                                                <action selector="stopSpeaking:" destination="EnG-PU-6GW" id="6Dt-on-0uq"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="startSpeaking:"/>
+                                        <itemDeletion anchorAction="stopSpeaking:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="Format" identifier="com.apple.menu.format" id="3Dp-F3-qJ3">
+                            <children>
+                                <menu isSystemItem="YES" title="Font" identifier="com.apple.menu.font" id="rED-vt-ccC">
+                                    <children>
+                                        <menu isSystemItem="YES" title="Text Style" identifier="com.apple.menu.text-style" id="IDA-TL-gRu">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Show Fonts" discoverabilityTitle="" propertyListString="" input="t" id="0Hq-6g-3vK">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="toggleFontPanel:" destination="EnG-PU-6GW" id="6zz-Lp-biu"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Bold" discoverabilityTitle="" propertyListString="" input="b" id="XoZ-oo-4pv">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="toggleBoldface:" destination="EnG-PU-6GW" id="hil-v0-pPj"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Italic" discoverabilityTitle="" propertyListString="" input="i" id="YdS-Yd-ATx">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="toggleItalics:" destination="EnG-PU-6GW" id="vBv-YA-Kix"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Underline" discoverabilityTitle="" propertyListString="" input="u" id="Kkq-u3-xxI">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="toggleUnderline:" destination="EnG-PU-6GW" id="vQy-xU-HZi"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="toggleFontPanel:"/>
+                                                <itemDeletion anchorAction="toggleBoldface:"/>
+                                                <itemDeletion anchorAction="toggleItalics:"/>
+                                                <itemDeletion anchorAction="toggleUnderline:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" title="Text Size" identifier="com.apple.menu.text-size" id="XFT-6S-zeQ">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Bigger" discoverabilityTitle="" propertyListString="" input="+" id="FdU-p3-fpX">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="increaseSize:" destination="EnG-PU-6GW" id="fvc-5g-8dv"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Smaller" discoverabilityTitle="" propertyListString="" input="-" id="h4p-yN-jHM">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="decreaseSize:" destination="EnG-PU-6GW" id="BJT-4Z-OId"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="increaseSize:"/>
+                                                <itemDeletion anchorAction="decreaseSize:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" title="Text Color" identifier="com.apple.menu.text-color" id="nVR-7I-pt1">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Show Colors" discoverabilityTitle="" propertyListString="" input="c" id="75r-HE-tCV">
+                                                    <keyModifierFlags key="modifierFlags" shift="YES" command="YES"/>
+                                                    <connections>
+                                                        <action selector="orderFrontColorPanel:" destination="EnG-PU-6GW" id="eY7-vD-xZy"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="orderFrontColorPanel:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" title="Text Pasteboard" identifier="com.apple.menu.text-style-pasteboard" id="Kbq-WX-qYa">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Copy Style" discoverabilityTitle="" propertyListString="" input="c" id="S62-zJ-9Ll">
+                                                    <keyModifierFlags key="modifierFlags" option="YES" command="YES"/>
+                                                    <connections>
+                                                        <action selector="copyFont:" destination="EnG-PU-6GW" id="4x4-4c-8PZ"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Paste Style" discoverabilityTitle="" propertyListString="" input="v" id="83t-Ok-s7r">
+                                                    <keyModifierFlags key="modifierFlags" option="YES" command="YES"/>
+                                                    <connections>
+                                                        <action selector="pasteFont:" destination="EnG-PU-6GW" id="kjN-3k-V7J"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="copyFont:"/>
+                                                <itemDeletion anchorAction="pasteFont:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                    </children>
+                                </menu>
+                                <menu isSystemItem="YES" title="Text" identifier="com.apple.menu.text" id="uh3-CZ-m18">
+                                    <children>
+                                        <menu isSystemItem="YES" title="Text Alignment" identifier="com.apple.menu.alignment" id="IPd-wJ-ZM3">
+                                            <menuOptions key="menuOptions" displayInline="YES"/>
+                                            <children>
+                                                <command title="Align Left" discoverabilityTitle="" propertyListString="" input="{" id="QSs-Ma-WC0">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="alignLeft:" destination="EnG-PU-6GW" id="Dj8-8B-Ip5"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Center" discoverabilityTitle="" propertyListString="" input="|" id="kOx-fF-Ovc">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="alignCenter:" destination="EnG-PU-6GW" id="IZP-sF-khv"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Justify" discoverabilityTitle="" propertyListString="" id="Flm-20-xyI">
+                                                    <connections>
+                                                        <action selector="alignJustified:" destination="EnG-PU-6GW" id="TPb-Eu-KQh"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Align Right" discoverabilityTitle="" propertyListString="" input="}" id="oMk-LW-P0H">
+                                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                                    <connections>
+                                                        <action selector="alignRight:" destination="EnG-PU-6GW" id="cxK-Vq-Ng7"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="alignLeft:"/>
+                                                <itemDeletion anchorAction="alignCenter:"/>
+                                                <itemDeletion anchorAction="alignJustified:"/>
+                                                <itemDeletion anchorAction="alignRight:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                        <menu isSystemItem="YES" title="Writing Direction" identifier="com.apple.menu.writing-direction" id="Tao-de-q4g">
+                                            <children>
+                                                <command title="Default" discoverabilityTitle="" propertyListString="" id="piv-Uh-mVO">
+                                                    <connections>
+                                                        <action selector="makeTextWritingDirectionNatural:" destination="EnG-PU-6GW" id="BPp-Lq-TR9"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Right to Left" discoverabilityTitle="" propertyListString="" id="RXM-AG-tDm">
+                                                    <connections>
+                                                        <action selector="makeTextWritingDirectionRightToLeft:" destination="EnG-PU-6GW" id="JKu-RJ-fam"/>
+                                                    </connections>
+                                                </command>
+                                                <command title="Left to Right" discoverabilityTitle="" propertyListString="" id="alO-co-B9Y">
+                                                    <connections>
+                                                        <action selector="makeTextWritingDirectionLeftToRight:" destination="EnG-PU-6GW" id="BK8-fb-MuF"/>
+                                                    </connections>
+                                                </command>
+                                            </children>
+                                            <systemMenuChildDeletions>
+                                                <itemDeletion anchorAction="makeTextWritingDirectionNatural:"/>
+                                                <itemDeletion anchorAction="makeTextWritingDirectionRightToLeft:"/>
+                                                <itemDeletion anchorAction="makeTextWritingDirectionLeftToRight:"/>
+                                            </systemMenuChildDeletions>
+                                        </menu>
+                                    </children>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="View" identifier="com.apple.menu.view" id="DrO-DC-2wD">
+                            <children>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.fullscreen" id="cI0-R4-XzU">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Enter Full Screen" discoverabilityTitle="" propertyListString="" input="f" id="CNk-2X-k9T">
+                                            <keyModifierFlags key="modifierFlags" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleFullScreen:" destination="EnG-PU-6GW" id="wvV-nU-148"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="toggleFullScreen:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="Window" identifier="com.apple.menu.window" id="tQO-gK-pZ3">
+                            <children>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.minimize-and-zoom" id="4By-ef-0zM">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Minimize" discoverabilityTitle="" propertyListString="" input="m" id="D6J-Tg-ODg">
+                                            <keyModifierFlags key="modifierFlags" command="YES"/>
+                                            <connections>
+                                                <action selector="performMiniaturize:" destination="EnG-PU-6GW" id="nOx-0G-zRE"/>
+                                            </connections>
+                                        </command>
+                                        <command title="Zoom" discoverabilityTitle="" propertyListString="" id="6Wv-Cg-XD1">
+                                            <connections>
+                                                <action selector="performZoom:" destination="EnG-PU-6GW" id="aNr-um-vLp"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="performMiniaturize:"/>
+                                        <itemDeletion anchorAction="performZoom:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                                <menu isSystemItem="YES" identifier="com.apple.menu.bring-all-to-front" id="o72-dm-1ug">
+                                    <menuOptions key="menuOptions" displayInline="YES"/>
+                                    <children>
+                                        <command title="Bring All to Front" discoverabilityTitle="" propertyListString="" id="sCI-sX-ziu">
+                                            <connections>
+                                                <action selector="arrangeInFront:" destination="EnG-PU-6GW" id="Ilz-Ag-cZB"/>
+                                            </connections>
+                                        </command>
+                                    </children>
+                                    <systemMenuChildDeletions>
+                                        <itemDeletion anchorAction="arrangeInFront:"/>
+                                    </systemMenuChildDeletions>
+                                </menu>
+                            </children>
+                        </menu>
+                        <menu isSystemItem="YES" title="Help" identifier="com.apple.menu.help" id="U8M-rP-bvE">
+                            <children>
+                                <command title="Application Help" discoverabilityTitle="" propertyListString="" input="?" id="Rhz-EM-R1n">
+                                    <keyModifierFlags key="modifierFlags" command="YES"/>
+                                    <connections>
+                                        <action selector="showHelp:" destination="EnG-PU-6GW" id="CIO-EH-uez"/>
+                                    </connections>
+                                </command>
+                            </children>
+                            <systemMenuChildDeletions>
+                                <itemDeletion anchorAction="showHelp:"/>
+                            </systemMenuChildDeletions>
+                        </menu>
+                    </children>
+                </menu>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnG-PU-6GW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="538"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="Pge-9M-aDY">
             <objects>
@@ -165,20 +720,20 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ng5-p1-G72" secondAttribute="height" multiplier="1:1" id="VnZ-BP-U9a"/>
                                     <constraint firstAttribute="height" constant="28" id="grS-gR-WhZ">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                                     </constraint>
                                 </constraints>
-                                <color key="tintColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="􀍢" image="More Icon"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="More Icon"/>
                                 <connections>
                                     <action selector="didTapInfoButton" destination="7GF-cd-W9L" eventType="touchUpInside" id="9aW-7d-N33"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Lg-w1d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="hero" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-Lg-w1d">
                                 <rect key="frame" x="0.0" y="82" width="375" height="313.33333333333331"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="GLD-8j-txz" firstAttribute="centerX" secondItem="7xd-pB-Uwj" secondAttribute="centerX" id="1Z9-bE-IZ0"/>
                             <constraint firstItem="0cJ-v7-70e" firstAttribute="bottom" secondItem="ng5-p1-G72" secondAttribute="bottom" constant="18" id="4bU-rJ-Gt6"/>
@@ -238,7 +793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcm-TF-lfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="950.89285714285711"/>
+            <point key="canvasLocation" x="1186" y="951"/>
         </scene>
         <!--Apple Special Event-->
         <scene sceneID="t3J-E7-GXM">
@@ -251,17 +806,19 @@
                         <sections>
                             <tableViewSection id="oOw-eU-jgH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="86Z-J5-PZ6">
-                                        <rect key="frame" x="0.0" y="18" width="375" height="1.1920928955078125e-07"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="256" id="86Z-J5-PZ6">
+                                        <rect key="frame" x="0.0" y="18" width="375" height="256"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="86Z-J5-PZ6" id="xkb-JM-fIj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWDC2019-WithText" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-e0-lBH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-e0-lBH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+                                                    <color key="backgroundColor" name="Background"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" name="Background"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Dmf-e0-lBH" secondAttribute="bottom" id="4YP-Zr-d1I"/>
                                                 <constraint firstItem="Dmf-e0-lBH" firstAttribute="top" secondItem="xkb-JM-fIj" secondAttribute="top" id="T59-zm-41p"/>
@@ -275,13 +832,13 @@
                             <tableViewSection id="T8i-eZ-7wz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="8uU-Op-ND4">
-                                        <rect key="frame" x="0.0" y="54.00000011920929" width="375" height="48"/>
+                                        <rect key="frame" x="0.0" y="310" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8uU-Op-ND4" id="kcb-Sm-PL1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live from Steve Jobs Theatre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-fY-ULs">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live from Steve Jobs Theatre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-fY-ULs">
                                                     <rect key="frame" x="18" y="8" width="339" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -301,7 +858,7 @@
                             <tableViewSection id="5Ag-2m-jdh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0az-Km-Apv">
-                                        <rect key="frame" x="0.0" y="138.00000011920929" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="394" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0az-Km-Apv" id="jgO-zx-Yh3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -328,7 +885,7 @@
                             <tableViewSection id="Ag5-FV-Av8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="taI-3s-Xe5">
-                                        <rect key="frame" x="0.0" y="218.00000011920929" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="474" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="taI-3s-Xe5" id="Lpa-k9-V9W">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -391,6 +948,9 @@
     </scenes>
     <resources>
         <image name="More Icon" width="38" height="38"/>
-        <image name="WWDC2019-WithText" width="1706.6666259765625" height="416"/>
+        <image name="hero" width="1200" height="675"/>
+        <namedColor name="Background">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

@@ -18,7 +18,7 @@ class EventManager {
     static func getEventInfo() -> ASE {
         return ASE(title: "Apple Special Event",
                    description: "Live from Steve Jobs Theatre.",
-                   unixTime: nil)
+                   unixTime: 1568134800)
     }
     
     static func getCountdownTime(from secondsUntilEvent: Double) -> Countdown {

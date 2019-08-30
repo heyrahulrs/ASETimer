@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		2049DD2C1F5BC8810070A19D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2049DD2B1F5BC8810070A19D /* NotificationCenter.framework */; };
 		2049DD2F1F5BC8810070A19D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049DD2E1F5BC8810070A19D /* TodayViewController.swift */; };
 		2049DD321F5BC8810070A19D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD301F5BC8810070A19D /* MainInterface.storyboard */; };
-		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2049DD361F5BC8810070A19D /* ASE Timer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2049DD291F5BC8810070A19D /* ASE Timer Widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2049DD3F1F5BCBBD0070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		2049DD401F5BCBC40070A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2049DD1A1F5BC4960070A19D /* Assets.xcassets */; };
 		204ED9ED2247A46E0008F825 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204ED9EC2247A46E0008F825 /* UIView-Extension.swift */; };
@@ -58,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		203B8D3422ABDE2400DC4BFD /* ASE Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ASE Timer.entitlements"; sourceTree = "<group>"; };
 		2049DD101F5BC4960070A19D /* ASE Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASE Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2049DD131F5BC4960070A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2049DD181F5BC4960070A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		2049DD121F5BC4960070A19D /* ASE Timer */ = {
 			isa = PBXGroup;
 			children = (
+				203B8D3422ABDE2400DC4BFD /* ASE Timer.entitlements */,
 				2049DD131F5BC4960070A19D /* AppDelegate.swift */,
 				2009147621206EEE00DFA5ED /* Model */,
 				2009147121206EB600DFA5ED /* Controller */,
@@ -360,6 +362,7 @@
 /* Begin PBXTargetDependency section */
 		2049DD351F5BC8810070A19D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2049DD281F5BC8810070A19D /* ASE Timer Widget */;
 			targetProxy = 2049DD341F5BC8810070A19D /* PBXContainerItemProxy */;
 		};
@@ -499,7 +502,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -509,15 +513,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ASE Timer/ASE Timer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,15 +538,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ASE Timer/ASE Timer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -547,10 +563,15 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer Widget/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.asetimerwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,10 +582,15 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6R75J2CEEH;
 				INFOPLIST_FILE = "ASE Timer Widget/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rahulrs0029.asetimer.asetimerwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -49,8 +49,6 @@ class MainViewController: UIViewController {
         
         eventHeadingLabel.text = event.title
         
-        updateLogoImage()
-        
         guard let eventUnixTime = event.unixTime else {
             print("Info: No Date Known.")
             self.updateUI(withFallbackText: DATE_UNKOWN)
@@ -76,7 +74,6 @@ class MainViewController: UIViewController {
         }
         
     }
-    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -107,7 +104,7 @@ class MainViewController: UIViewController {
 
         let nextViewController = storyboard?.instantiateViewController(withIdentifier: identifier) as! UINavigationController        
         
-        nextViewController.modalPresentationStyle = .popover
+//        nextViewController.modalPresentationStyle = .popover
         
         let infoViewController = nextViewController.viewControllers.first as! InfoViewController
         infoViewController.delegate = self
@@ -175,7 +172,7 @@ class MainViewController: UIViewController {
 
 //MARK: - MyDelegate
 
-extension MainViewController: MyDelegate {
+extension MainViewController: EventSharingDelegate {
     
     func didTapShareCountdownTimeButton(atUnixTime unixTime: TimeInterval) {
         
